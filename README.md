@@ -1,3 +1,3 @@
-# proyecto_x
-proyecto final.  
+# proyecto final.
+Intento del adivina quien, a ver si le gusta la idea. 
 Triste :(
