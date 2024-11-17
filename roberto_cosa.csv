@@ -1,0 +1,62 @@
+tipo_bicho,nombre,gram,morfologia,respiracion ,motilidad,patogena,fermentadora_de_lactosa,flagelos,esporas,fermentadora_de_glucosa,catalasa positiva,tipo_hifa,tamaño,antibiotico,comestible,forma_celula,medicinal,toxico,celula,parasito,saprofito,patogeno,mat_gen,cadena ,envoltura,vectores,huesped,retrotranscriptasa,vacuna,transmision,genero
+bacteria,Streptococcus ,positiva ,coco,anaerobio ,no,sí,no,no,no,sí,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,lactobacillus casei,positiva ,bacilo ,anaerobio ,no,no,sí,no,no,sí,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,staphylococcus aureus,positiva ,coco,anaerobio ,no,sí,no,no,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,moraxella catarrhalis,negativa,coco,aerobio,no,sí,no,no,no,no,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,vibrio cholerae,negativa,bacilo ,anaerobio ,sí,sí,no,sí,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,bacillus anthracis,positiva ,bacilo ,aerobio,no,sí,no,sí,sí,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,samonella enterica,negativa,bacilo ,anaerobio ,sí,sí,no,sí,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,escherichia coli,negativa,bacilo ,anaerobio ,sí,sí,sí,sí,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,clostridium botulinum,positiva ,bacilo ,anaerobio ,no,sí,no,no,sí,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,listeria monocytogenes ,positiva ,bacilo ,anaerobio ,sí,sí,no,sí,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,bacillus thuringiensis,positiva ,bacilo ,aerobio,no,no,no,sí,sí,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,vibrio fischeri ,negativa,bacilo ,anaerobio ,sí,no,no,sí,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,mycobacterium tuberculosis,NA,bacilo ,aerobio,no,sí,no,no,no,no,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,azotobacter chroococcum ,negativa,bacilo ,aerobio,sí,no,no,sí,no,no,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,clostridium tetani ,positiva ,bacilo ,anaerobio ,no,sí,no,no,sí,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,bifidobacterium,positiva ,bacilo ,anaerobio ,no,no,no,no,no,sí,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,neisseria gonorrhoeae,negativa,coco,aerobio,no,sí,no,no,no,no,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,klebsiella pneumoniae,negativa,bacilo ,anaerobio ,no,sí,sí,no,no,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,lactobacillus acidophilus,positiva ,bacilo ,anaerobio ,no,no,sí,no,no,sí,no,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+bacteria,bacillus subtilis,positiva ,bacilo ,aerobio,sí,no,no,sí,sí,sí,sí,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,saccharomyces cerevisiae,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,levadura,no,no,unicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,candida albicans,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,levadura,no,no,unicelular,no,no,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,aspergillus fumigatus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,hifa,no,no,multicelular,no,si,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,penicillium chrysogenum,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,microscopico,si,no,hifa,no,no,multicelular,no,si,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,aspergillus niger,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,hifa,no,no,multicelular,no,si,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,rhizopus stolonifer,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,hifa,no,no,multicelular,si,si,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,claviceps purpurea,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,microscopico,no,no,hifa,no,si,multicelular,si,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,cryptococcus neoformans,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,no septada,microscopico,no,no,levadura,no,no,unicelular,no,no,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,microsporum canis,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,microscopico,no,no,hifa,no,no,multicelular,no,no,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,lycoperdon pertulatum,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,si,no,multicelular,no,si,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,russula emetica,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,no,hifa,no,si,multicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,lactarius indigo,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,no,no,multicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,amanita gemmata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,no,hifa,no,si,multicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,fusarium solani,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,microscopico,no,no,hifa,no,no,multicelular,no,si,si,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,agaricus bisporus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,no,no,multicelular,no,si,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,amanita phalloides,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,no,hifa,no,si,multicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,lentinula edodes,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,si,no,multicelular,no,si,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,pleurotus ostreatus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,no,no,multicelular,no,si,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,morchella esculenta,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,no,no,multicelular,no,no,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+hongo,ganoderma lucidum,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,septada,macroscopico,no,si,hifa,si,no,multicelular,no,si,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
+virus,herpes,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,si,no,humano,no,no,sexual,simplexvirus
+virus,cytomegalovirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,si,no,humano,no,no,contacto,cytomegalovirus
+virus,coronavirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,no,humano,no,si,saliva,betacoronavirus
+virus,pneumovirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,no,humano,no,no,saliva,pneumovirus
+virus,lyssavirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,si,animal,no,si,saliva,lyssavirus
+virus,influenza,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,no,humano,no,si,saliva,influenzavirus
+virus,VIH,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,no,humano,si,no,sangre,lentivirus
+virus,rotavirus ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,doble,no,no,animal,no,si,fecal,rotavirus
+virus,flavivirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,si,humano,no,no,vector,flavivirus 
+virus,viruela simica,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,si,no,animal,no,si,contacto,orthopoxvirus
+virus,ebola ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,no,humano,no,si,sangre,ebolavirus
+virus,arenavirus,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,si,humano,no,si,vector,arenavirus
+virus,vius mosaico del tabaco,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,no,si,plantas,no,no,vector,tobamovirus
+virus,bacteriofago T4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,no,no,bacterias,no,no,bacteria,tequatrovirus
+virus,hepatitis B,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,si,no,humano,no,si,sangre,hepadnavirus
+virus,adenovirus ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,no,no,humano,no,no,saliva,adenovirus
+virus,VPH,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,no,no,humano,no,si,sexual,alphapapillomavirus
+virus,dengue,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,si,si,humano,no,si,vector,orthoflavivirus 
+virus,virus de la polio ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,rna,simple,no,no,humano,no,si,fecal,enterovirus
+virus,virus mosaico de la coliflor,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,simple,no,si,plantas,no,no,vector,caulimovirus
+virus,virus epstein-barr,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,dna,doble,si,no,humano,no,no,contacto,lymphocryptovirus
