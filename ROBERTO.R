@@ -1,69 +1,4 @@
-data.frame(organismo=c("bacteria","bacteria"),
-          gram=c("+","-"),
-          flagelos=c("si","no"),
-          cilios=c("no","no"),
-          biofilm=c("si","no"))->las_bacters
-las_bacters
 
-for(i in 50){
-  print("hola buenas tardes")
-}
-
-# Definimos la base de datos de organismos
-organismos <- data.frame(
-  Nombre = c("E.coli", "Candida", "Influenza", "S.aureus", "Aspergillus", "HIV"),
-  Tipo = c("Bacteria", "Hongo", "Virus", "Bacteria", "Hongo", "Virus"),
-  Forma = c("Bacilo", "Levadura", "Esfera", "Esfera", "Filamentoso", "Esfera"),
-  Gram = c("Negativo", NA, NA, "Positivo", NA, NA),
-  Habitat = c("Intestinos", "Mucosa", "Respiratorio", "Piel", "Pulmones", "Sangre")
-)
-
-# Introducción al juego
-cat("¡Bienvenido al juego 'Adivina quién: Edición Microorganismos'!\n")
-cat("Piensa en un microorganismo y responde a las preguntas para que pueda adivinar.\n")
-
-# Variables para controlar el flujo del juego
-quedan <- organismos
-seguir <- TRUE
-
-while (seguir) {
-  # Preguntar por el tipo de organismo
-  if (nrow(quedan) > 1) {
-    tipo <- readline(prompt = "¿Es una Bacteria, Hongo o Virus? ")
-    quedan <- quedan[quedan$Tipo == tipo, ]
-  }
-  
-  # Preguntar por la forma
-  if (nrow(quedan) > 1) {
-    forma <- readline(prompt = "¿Qué forma tiene (Bacilo, Levadura, Esfera, Filamentoso)? ")
-    quedan <- quedan[quedan$Forma == forma, ]
-  }
-  
-  # Preguntar por Gram (sólo para bacterias)
-  if (nrow(quedan) > 1 && any(quedan$Tipo == "Bacteria")) {
-    gram <- readline(prompt = "¿Es Gram Positivo o Negativo? (deja vacío si no aplica) ")
-    if (gram != "") {
-      quedan <- quedan[quedan$Gram == gram, ]
-    }
-  }
-  
-  # Preguntar por el hábitat
-  if (nrow(quedan) > 1) {
-    habitat <- readline(prompt = "¿Dónde vive (Intestinos, Mucosa, Respiratorio, Piel, Pulmones, Sangre)? ")
-    quedan <- quedan[quedan$Habitat == habitat, ]
-  }
-  
-  # Comprobamos si queda un solo organismo
-  if (nrow(quedan) == 1) {
-    cat("¡He adivinado! Es:", quedan$Nombre, "\n")
-    seguir <- FALSE
-  } else if (nrow(quedan) == 0) {
-    cat("No he podido adivinar tu microorganismo. ¿Quieres intentarlo de nuevo?\n")
-    seguir <- FALSE
-  } else {
-    cat("Aún quedan varias opciones. Sigamos preguntando...\n")
-  }
-}
 
 hongo_adivina <- function(microorganismo){
   cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
@@ -122,3 +57,121 @@ adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada 
 #hola
  
 
+los_virus<-function(){
+  #para identificar que onda
+  gen<-readline(prompt("que material genético tiene: dna/rna"))
+  cadena<-readline(prompt("cuantas cadenas tiene: doble/sencilla"))
+  envoltura<-readline(prompt("tiene envoltura: si/no"))
+  vectores<-readline(prompt("necesita de vectores: si/no"))
+  huesped<-readline(prompt("principalmente que afecta: humano/animal/planta/bacteria"))
+  enzima<-readline(prompt("usa retrotranscriptasa: si/no"))#si dice que si ya obvio es VIH
+  vacuna<-readline(prompt("la infección causada por tu virus tiene vacuna disponible?: si/no"))
+  trans<-readline(prompt("cuál es su forma principal de transmisión: sexual/contacto/saliva/sangre/fecal/vector/bacteria"))
+  #no se como plantear la pregunta del género :/
+  
+  if(gen=="dna"){
+    if(cadena=="sencilla"){
+      if(envoltura=="no"){
+        if(vector=="si"){
+          if(huesped=="planta"){
+            if(enzima=="no"){
+              if(vacuna=="no"){
+              if(trans=="vector"){
+                print("tu virus es el virus del mosaico de la coliflor no es así?")
+              }
+            }
+          }
+        }
+      }
+    }
+      }else if(cadena=="doble"){
+        if(envoltura=="no"){
+        if(vector=="no"){
+          if(huesped=="humano"){
+            if(vacuna=="no"){
+              if(enzima=="no"){
+                if(trans=="saliva"){
+                  print("tu virus es un adenovirus")
+                }
+              }
+            }else if(vacuna=="si"){
+              if(enzima=="no"){
+                if(trans=="sexual"){
+                  print("tu virus es el del VPH")
+                }
+              }
+            }
+          }else if(huesped=="bacteria"){
+            if(vacuna=="no"){
+              if(enzima=="no"){
+                if(trans=="bacteria"){
+                  print("pensaste en un bacteriofago T4")
+                }
+              }
+            }
+          }
+        }
+        }else if(envoltura=="si"){
+        if(vector=="no"){
+          if(huesped=="animal"){
+            print("tu virus es la viruela símica")
+          }else if(huesped=="humano"){
+            if(enzima=="no"){
+              if(vacuna=="si"){
+                print("pensaste en el virus de la hepatitis B")
+              } else {
+                if(trans=="sexual"){
+                  print("pensaste en el virus del herpes")
+                } else if(trans=="contacto"){
+                  print("mmm hay 2 opciones para tu respuesta: cytomegalovirus o epstein barr")
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+  } else if(gen=="rna"){
+    if(cadena=="doble"){
+      print("tu virus es el rotavirus")
+    }else {
+      if(envoltura=="no"){
+        if(vector=="si"){
+          print("tienes el virus del mosaico del tabaco")
+        } else{ 
+          print("tienes el virus de la polio")}
+      }else{
+        if(vector=="si"){
+          if(huesped=="animal"){
+            print("tu virus es el de la rabia, o sea lyssavirus")
+          }else if(huesped=="humano"){
+            if(enzima=="no"){
+              if(vacuna=="si"){
+                print("pensaste en arenavirus")
+              }else{
+                print("pensaste en el flavivirus")
+              }
+            }
+          }
+        }else{
+          if(huesped=="humano"){
+            if(enzima=="si"){
+              print("pensaste en el VIH, o sea lentivirus")
+            }else{
+              if(vacuna=="no"){
+                print("tienes el pneumovirus")
+              } else{
+                if(trans=="sangre"){
+                  print("pensaste en el ébola")
+                }else if(trans=="saliva"){
+                  print("hay dos opciones para esto: el coronavirus o la influenza")
+                }
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+los_virus()
