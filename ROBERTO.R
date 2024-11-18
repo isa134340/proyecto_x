@@ -59,14 +59,14 @@ adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada 
 
 los_virus<-function(){
   #para identificar que onda
-  gen<-readline(prompt("que material genético tiene: dna/rna"))
-  cadena<-readline(prompt("cuantas cadenas tiene: doble/sencilla"))
-  envoltura<-readline(prompt("tiene envoltura: si/no"))
-  vectores<-readline(prompt("necesita de vectores: si/no"))
-  huesped<-readline(prompt("principalmente que afecta: humano/animal/planta/bacteria"))
-  enzima<-readline(prompt("usa retrotranscriptasa: si/no"))#si dice que si ya obvio es VIH
-  vacuna<-readline(prompt("la infección causada por tu virus tiene vacuna disponible?: si/no"))
-  trans<-readline(prompt("cuál es su forma principal de transmisión: sexual/contacto/saliva/sangre/fecal/vector/bacteria"))
+  gen<-readline(prompt="que material genético tiene: dna/rna")
+  cadena<-readline(prompt="cuantas cadenas tiene: doble/sencilla")
+  envoltura<-readline(prompt="tiene envoltura: si/no")
+  vectores<-readline(prompt="necesita de vectores: si/no")
+  huesped<-readline(prompt="principalmente que afecta: humano/animal/planta/bacteria")
+  enzima<-readline(prompt="usa retrotranscriptasa: si/no")#si dice que si ya obvio es VIH
+  vacuna<-readline(prompt="la infección causada por tu virus tiene vacuna disponible?: si/no")
+  trans<-readline(prompt="cuál es su forma principal de transmisión: sexual/contacto/saliva/sangre/fecal/vector/bacteria")
   #no se como plantear la pregunta del género :/
   
   if(gen=="dna"){
@@ -84,7 +84,7 @@ los_virus<-function(){
         }
       }
     }
-      }else if(cadena=="doble"){
+      }else{
         if(envoltura=="no"){
         if(vector=="no"){
           if(huesped=="humano"){
@@ -94,7 +94,7 @@ los_virus<-function(){
                   print("tu virus es un adenovirus")
                 }
               }
-            }else if(vacuna=="si"){
+            }else{
               if(enzima=="no"){
                 if(trans=="sexual"){
                   print("tu virus es el del VPH")
@@ -111,7 +111,7 @@ los_virus<-function(){
             }
           }
         }
-        }else if(envoltura=="si"){
+        }else{
         if(vector=="no"){
           if(huesped=="animal"){
             print("tu virus es la viruela símica")
@@ -175,3 +175,4 @@ los_virus<-function(){
     }
 }
 los_virus()
+###todavía falta resolver eso de que quedan preguntas con 2 virus ahí pero ya casi está listo :D
