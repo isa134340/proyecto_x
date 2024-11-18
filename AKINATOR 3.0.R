@@ -1,0 +1,89 @@
+##AKINATOR 3.0
+
+hongo_adivina <- function(microorganismos){
+  cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
+  readline(prompt = "escoge una opccion (macroscopico o microscopico) ") -> inicial
+  while(tolower(inicial) != "macroscopico" & tolower(inicial) != "microscopico") {
+    inicial <- readline(prompt = "Escoge la opción 'macroscopico' o 'microscopico': ")
+  }
+  ####EMPEZAMOS CON MACROSCOPICO
+  if (tolower(inicial) == "macroscopico") {
+    # Segunda pregunta: ¿PRODUCE ANTIBIOTICO?
+    antibiotico <- readline(prompt = "¿El hongo produce antibiotico (si/no): ")
+    while(antibiotico != "si" & antibiotico != "no"){
+      antibiotico <- readline(prompt = "¿El hongo produce antibiotico (si/no): ")
+    }
+    if(tolower(antibiotico) == "no"){
+      # TERCERA PREGUNTA: ¿ES COMESTIBLE?
+      comestible <- readline(prompt = "¿El hongo es comestible (si/no): ")
+      while(comestible != "si" & comestible != "no"){
+        comestible <- readline(prompt = "¿El hongo es comestible (si/no):  ") 
+      }  
+      if(comestible == "si"){
+        medicinal <- readline(prompt = "¿El hongo es medicinal (si/no): ")
+        while(medicinal != "si" & medicinal != "no"){
+          medicinal <- readline(prompt = "¿El hongo es medicinal (si/no):  ")
+        }
+        if (medicinal == "si"){
+          print("Los hongos que coinciden con la búsqueda son Lycoperdon pertulatum, Lentinula edodes o Ganoderma lucidum")
+        } else if (medicinal == "no"){
+          sapo <- readline(prompt = "El hongo es saprofito? (si/no): ")
+          while (tolower(sapo) != "si" & tolower (sapo) != "no"){
+            sapo <- readline(prompt = "¿Es saprofito (si/no): ")}
+          if (tolower(sapo) == "no"){
+            print("Los hongos que coinciden con la busqueda son lactarius indigo, Agaricus bisporus o Morchella esculenta")
+          } else if (tolower(sapo) == "si"){
+            print("Tu hongo es Pleurotus ostreatus")
+          }
+        }
+      }else if (comestible == "no"){
+        print("Tu hongo puede ser Russula emetica, Amanita gemmata o Amanita phalloides")
+      }
+    } else if(antibiotico == "si"){
+      print("No hay ningun hongo que coincide con tu busqueda, intenta de nuevo")
+    }
+  }
+  if (tolower(inicial) == "microscopico") {
+    # Aquí empiezas con la opción "microscopico"
+    antibiotico_2 <- readline(prompt = "¿El hongo produce antibiótico? (si/no): ")
+    while (tolower(antibiotico_2) != "si" & tolower(antibiotico_2) != "no"){
+      antibiotico_2 <- readline(prompt = "¿El hongo produce antibiótico? (si/no): ")
+    }
+    
+    if (tolower(antibiotico_2) == "si") {
+      print("Tu microorganismo es Penicillium chrysogenum.")
+    }
+    else if (antibiotico_2 == "no"){
+      hifa <- readline(prompt = "¿Tiene hifa septada o no septada (escribe septada o no septada): ")
+      while (tolower(hifa) != "septada" & tolower (hifa) != "no septada") {
+        hifa <- readline(prompt = "¿Tiene hifa septada o no septada (escribe septada o no septada): ") 
+      }
+      if (tolower(hifa == "no septada")){
+        celula <- readline(prompt = "¿Es unicelular o multicelular: ")
+        while (tolower(celula) != "unicelular" & tolower (celula) != "multicelular") {
+          celula <- readline(prompt = "¿Es unicelular o multicelular: ")
+        } 
+        if (tolower(celula)== "unicelular"){
+          print("Tu hongo puede ser Candida albicans o Cryptococcus neoformans")
+        }
+        else if (tolower(celula)== "multicelular"){
+          saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
+          while (tolower(saprofito) != "si" & tolower (saprofito) != "no"){
+            saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
+          }
+          if (tolower(saprofito)== "si"){
+            print("Tu hongo puede ser: Aspergillus fumigatus, Aspergillus niger,Rhizopus stolonifer o Fusarium solani")
+          } else if (tolower(saprofito)== "no") {
+            print("Tu hongo es Microsporum canis")
+          }
+        }
+      }
+      else if (tolower(hifa) == "septada"){
+        print("Tu microorganismo es Claviceps purpurea.")
+      } 
+    }
+  }
+}
+
+######
+hongo_adivina(microorganismo)
