@@ -83,3 +83,6 @@ adivina_quien <- function(microorganismos) {
 # Ejecutar el juego
 adivina_quien(microorganismos)
 
+
+
+

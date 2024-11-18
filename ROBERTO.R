@@ -184,3 +184,16 @@ los_virus<-function(){
 }
 los_virus()
 ###todavía falta resolver eso de que quedan preguntas con 2 virus ahí pero ya casi está listo :D
+#ya está resuelto lo de los 2 virus en las preguntas
+list(data.frame(virus=c("herpes","cytomegalovirus","coronavirus","pneumovirus","lyssavirus","influenza","VIH","rotavirus","flavivirus","viruela símica","Ébola","arenavirus","virus mosaico del tabaco","bacteriófago T4","hepatitis B","adenovirus","VPH","dengue","polio","virus mosaico de la coliflor","epstein-barr"),
+           material_genetico=c("DNA","DNA","RNA","RNA","RNA","RNA","RNA","RNA","RNA","DNA","RNA","RNA","RNA","DNA","DNA","DNA","DNA","RNA","RNA","DNA","DNA"),
+           Cadena=c("doble","doble","sencilla","sencilla","sencilla","sencilla","sencilla","doble","sencilla","doble","sencilla","sencilla","sencilla","doble","doble","doble","doble","sencilla","sencilla","sencilla","doble"),
+           envoltura=c("si","si","si","si","si","si","si","no","si","si","si","si","no","no","si","no","no","si","no","no","si"),
+           vector=   c("no","no","no","no","si","no","no","no","si","no","no","si","si","no","no","no","no","si","no","si","no"),
+           huesped=c("humano","humano","humano","humano","animal","humano","humano","animal","humano","animal","humano","humano","planta","bacteria","humano","humano","humano","humano","humano","planta","humano"),
+           retrotranscriptasa=c("no","no","no","no","no","no","si","no","no","no","no","no","no","no","no","no","no","no","no","no","no"),
+           vacuna=c("no","no","si","no","si","si","no","si","no","si","si","si","no","no","si","no","si","si","si","no","no"),
+           transmisión=c("sexual","contacto","saliva","saliva","saliva","saliva","sangre","fecal","vector","contacto","sangre","vector","vector","bacteria","sangre","saliva","sexual","vector","fecal","vector","contacto"),
+           género=c("Simplexvirus","Cytomegalovirus","Betacoronavirus","Pneumovirus","Lyssavirus","Influenzavirus","Lentivirus","Rotavirus","Flavivirus","Orthopoxvirus","Ebolavirus","Arenavirus","Tobamovirus","Tequatrovirus","Hepadnovirus","Adenovirus","Aplhapapillomavirus","Orthoflavivirus","Enterovirus","Caulimovirus","Lymphocryptovirus")
+           )->nuestrosvirusitos#podríamos poner todos los data.frames al inicio así como una lista para que muestre los 3 juntos y que así escojan el que quieran 
+nuestrosvirusitos
