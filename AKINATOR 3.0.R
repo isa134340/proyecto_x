@@ -219,7 +219,6 @@ hongo_adivina <- function(microorganismos){
       print("No hay ningún hongo que coincida con tu búsqueda, intenta de nuevo")
     }
   }
-  
   #### EMPEZAMOS CON MICROSCÓPICO
   if (tolower(inicial) == "microscopico") {
     antibiotico_2 <- readline(prompt = "¿El hongo produce antibiótico? (si/no): ")
@@ -234,7 +233,6 @@ hongo_adivina <- function(microorganismos){
       while (tolower(hifa) != "septada" & tolower(hifa) != "no septada") {
         hifa <- readline(prompt = "¿Tiene hifa septada o no septada (escribe septada o no septada): ")
       }
-      
       if (hifa == "no septada") {
         celula <- readline(prompt = "¿Es unicelular o multicelular? ")
         while (tolower(celula) != "unicelular" & tolower(celula) != "multicelular") {
@@ -242,8 +240,17 @@ hongo_adivina <- function(microorganismos){
         }
         
         if (celula == "unicelular") {
-          print("Tu hongo puede ser Candida albicans o Cryptococcus neoformans")
-        } else {
+          gen_6 <- readline(prompt = "¿El hongo es del genero Candida? (si/no)")
+          while (tolower(gen_6) != "si" & tolower(gen_6) != "no") {
+            gen_6 <- readline(prompt = "¿El hongo es del genero Candida? (si/no)")  
+          }
+          #print("Tu hongo puede ser Candida albicans o Cryptococcus neoformans")
+          if (gen_6 == "si") {
+            print("Tu hongo es Candida albicans")
+          } else {
+            print("Tu hongo es Cryptococcus neoformans")
+          }
+        }  else {
           saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
           while (tolower(saprofito) != "si" & tolower(saprofito) != "no") {
             saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
