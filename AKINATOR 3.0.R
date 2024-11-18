@@ -286,9 +286,12 @@ hongo_adivina <- function(microorganismos){
 hongo_adivina(microorganismo)
 ######
 #PARA REINICIAR EL JUEGO; ES UNA FUNCION APARTE.
-reiniciar <- function() {
-  readline(prompt = "¿Quieres jugar de nuevo? (si/no): ") -> respuesta
-  if (tolower(respuesta) == "si") {
+reinicio_juego <- function() {
+  readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta
+  while (respuesta != "si" & respuesta !="no") {
+    readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta  
+  }
+  if (respuesta == "si") {
     hongo_adivina(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
   } else {
     cat("¡Gracias por jugar! Adiós.\n")
