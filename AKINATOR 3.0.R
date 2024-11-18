@@ -101,7 +101,7 @@ hongo_adivina <- function(microorganismos){
   }
 }
 
-############################
+######################################
 hongo_adivina(microorganismo)
 ##########################
 if (medicinal == "si"){
