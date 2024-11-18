@@ -95,7 +95,8 @@ hongo_adivina <- function(microorganismo){
   }
 }
 
-adivina<-function(roberto_cosa){
+adivina<-function(x){
+  read.csv("roberto_cosa.csv")
   cat("ponte a jugar\n")
   readline(prompt("Escoge una opción de organismo: bacteria, hongo o virus"))->inicial
   if(tolower(inicial)=="bacteria"){
@@ -117,7 +118,7 @@ adivina<-function(roberto_cosa){
     }
   }
 }
-adivina(roberto_cosa)
+adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada pregunta que se hace 
 #hola
  
 
