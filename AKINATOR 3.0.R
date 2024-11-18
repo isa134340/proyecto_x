@@ -257,7 +257,22 @@ hongo_adivina <- function(microorganismos){
           }
           
           if (saprofito == "si") {
-            print("Tu hongo puede ser: Aspergillus fumigatus, Aspergillus niger, Rhizopus stolonifer o Fusarium solani")
+            gen_8 <- readline (prompt = "¿El hongo es del genero Fusarium? (si/no): ")
+            while (tolower(gen_8) != "si" & tolower(gen_8) !="no") {
+              gen_8 <- readline (prompt = "¿El hongo es del genero Fusarium? (si/no): ")  
+            }
+            if (gen_8 == "si"){
+              print("El hongo es Fusarium solani")
+            } else {
+              gen_9 <- readline(prompt = "¿El hongo es del genero Rhizopus? (si/no): ")
+              while (tolower(gen_9) != "si" & tolower(gen_9) !="no") {
+                gen_9 <- readline(prompt = "¿El hongo es del genero Rhizopus? (si/no): ")  
+              } 
+              if (gen_9 == "si"){
+                print("Tu hongo es Rhizopus stolonifer")
+              } else {print("Tus hongos son Aspergillus fumigatus y Aspergillus niger")}
+            }
+            
           } else {
             print("Tu hongo es Microsporum canis")
           }
