@@ -47,15 +47,30 @@ hongo_adivina <- function(microorganismos){
           while (tolower(sapo) != "si" & tolower (sapo) != "no"){
             sapo <- readline(prompt = "¿Es saprofito (si/no): ")}
           if (sapo == "no"){
-            print("Los hongos que coinciden con la busqueda son lactarius indigo, Agaricus bisporus o Morchella esculenta")
-          } else if (sapo == "si"){
+            gen_1 <- readline(prompt = "¿Tu hongo es del genero Lactarius? (si/no)")
+            while (tolower(gen_1) != "si" & tolower(gen_1) != "no") {
+              gen_1 <- readline(prompt = "¿Tu hongo es del genero Lactarius? (si/no): ")
+            }
+            if (gen_1 == "si"){
+              print("Tu hongo es lactarius indigo")
+            }else if (gen_1 == "no"){
+              gen_2 <- readline(prompt = "¿Tu hongo es del genero Agaricus? (si/no): ")
+              while (tolower(gen_2) != "si" & tolower(gen_2) != "no") {
+                gen_2 <- readline(prompt = "¿Tu hongo es del genero Agaricus? (si/no): ")
+              }
+              if (gen_2 == "si"){
+                print("Tu hongo es Agaricus bisporus")
+              }else{
+                print("Tu hongo es Morchella esculenta")
+              }
+          } }else if (sapo == "si"){
             print("Tu hongo es Pleurotus ostreatus")
           }
-        }
-      }else if (comestible == "no"){
+        
+      } }else if (comestible == "no"){
         print("Tu hongo puede ser Russula emetica, Amanita gemmata o Amanita phalloides")
       }
-    } else if(antibiotico == "si"){
+     else if(antibiotico == "si"){
       print("No hay ningun hongo que coincide con tu busqueda, intenta de nuevo")
     }
   }
@@ -99,24 +114,25 @@ hongo_adivina <- function(microorganismos){
       } 
     }
   }
+  }
 }
 
 ######################################
 hongo_adivina(microorganismo)
 ##########################
-if (medicinal == "si"){
-  genero_1 <- readline(prompt = "¿Tu hongo es del genero lycoperdon? (si/no): ")
-  while (tolower(genero_1) != "si" & tolower (genero_1) != "no"){
-    genero_1 <- readline(prompt = "¿Tu hongo es del genero lycoperdon? (si/no): ")
-  } if (genero_1 == "si"){
-    print("Tu hongo es Lycoperdon pertulatum")
-  } else if (genero_1 == "no"){
-    genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
-    while (tolower(genero_2) != "si" & tolower (genero_2) != "no"){
-      genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
-    }if (genero_2 == "si"){
-      print("Tu hongo es Lentinula edodes")
-    }else {print("Tu hongo es Ganoderma lucidum")
-    } 
-  }
-}
+#if (medicinal == "si"){
+#  genero_1 <- readline(prompt = "¿Tu hongo es del genero lycoperdon? (si/no): ")
+#  while (tolower(genero_1) != "si" & tolower (genero_1) != "no"){
+   # genero_1 <- readline(prompt = "¿Tu hongo es del genero lycoperdon? (si/no): ")
+ # } if (genero_1 == "si"){
+    #print("Tu hongo es Lycoperdon pertulatum")
+  #} else if (genero_1 == "no"){
+   # genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
+  #  while (tolower(genero_2) != "si" & tolower (genero_2) != "no"){
+   #   genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
+  #  }if (genero_2 == "si"){
+  #    print("Tu hongo es Lentinula edodes")
+  #  }else {print("Tu hongo es Ganoderma lucidum")
+  #  } 
+  #}
+#}
