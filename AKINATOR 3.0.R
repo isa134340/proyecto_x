@@ -302,4 +302,17 @@ reinicio_juego <- function() {
 
 
 ###########################################
+lycoperdon_secuencia <- readAAStringSet("SECUENCIAS/lycoperlum.fasta")
+print(lycoperdon_secuencia)
 
+secuencia <- readAAStringSet(file.choose())
+class(secuencia)
+
+hongo_secuencia <- function( ){
+  secuencia <- readAAStringSet(file.choose())
+  tamaño_aa<- width(secuencia)
+  return(secuencia)
+  return(tamaño_aa)
+}
+
+hongo_secuencia()
