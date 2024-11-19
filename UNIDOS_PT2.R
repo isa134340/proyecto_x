@@ -162,7 +162,7 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }
-  }
+  } #despues va el otro IF de bacterias----NO se si sea ELSE IF
 }  #EL DE LA FUNCION NO BORRAR
 
 adivina_microorganismos(microorganismos)
