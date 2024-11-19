@@ -373,13 +373,56 @@ aprendimos después de tantos intentos de correr los códigos… :c</p>
 bacterias, hongos y virus. Cada una de ellas consisitió en 20 ejemplos
 de cada microorganismo poniendo en las columnas características
 distintivas de cada uno de ellos. Puedes ver las bases de datos en el
-siguiente código</p>
-<pre class="r"><code>data.frame(hola=c(&quot;hola&quot;,&quot;Adios&quot;),
-           adios=c(&quot;adios&quot;,&quot;hola&quot;))-&gt;cosita
-cosita</code></pre>
-<pre><code>##    hola adios
-## 1  hola adios
-## 2 Adios  hola</code></pre>
+siguiente código:</p>
+<pre><code>##                      bacteria     gram morfologia respiracion motilidad
+## 1               Streptococcus positiva       coco   anaerobio        no
+## 2         Lactobacillus casei positiva     bacilo   anaerobio        no
+## 3       Staphylococcus aureus positiva       coco   anaerobio        no
+## 4       Moraxella catarrhalis negativa       coco     aerobio        no
+## 5             Vibrio cholerae negativa     bacilo   anaerobio        si
+## 6          Bacillus anthracis positiva     bacilo     aerobio        no
+## 7         Salmonella enterica negativa     bacilo   anaerobio        si
+## 8            Escherichia coli negativa     bacilo   anaerobio        si
+## 9       Clostridium botulinum positiva     bacilo   anaerobio        no
+## 10     Listeria monocytogenes positiva     bacilo   anaerobio        si
+## 11     Bacillus thuringiensis positiva     bacilo     aerobio        no
+## 12            Vibrio fischeri negativa     bacilo   anaerobio        si
+## 13 Mycobacterium tuberculosis       NA     bacilo     aerobio        no
+## 14    Azotobacter chroococcum negativa     bacilo     aerobio        si
+## 15         Clostridium tetani positiva     bacilo   anaerobio        no
+## 16            Bifidobacterium positiva     bacilo   anaerobio        no
+## 17      Neisseria gonorrhoeae negativa       coco     aerobio        no
+## 18     Klebsiella pneunmoniae negativa     bacilo   anaerobio        no
+## 19  Lactobacillus acidophilus positiva     bacilo   anaerobio        no
+## 20          Bacillus subtilis positiva     bacilo     aerobio        si
+##    patogena fermenta_lactosa flagelo esporas fermenta_glucosa catalasa oxidasa
+## 1        si               no      no      no               si       no      no
+## 2        no               si      no      no               si       no      no
+## 3        si               no      no      no               si       si      no
+## 4        si               no      no      no               no       si      si
+## 5        si               no      si      no               si       si      si
+## 6        si               no      si      si               si       si      si
+## 7        si               no      si      no               si       si      no
+## 8        si               si      si      no               si       si      no
+## 9        si               no      no      si               no       no      no
+## 10       si               no      si      no               si       si      si
+## 11       no               no      si      si               si       si      si
+## 12       no               no      si      no               si       si      si
+## 13       si               no      no      no               no       no      si
+## 14       no               no      si      no               no       si      si
+## 15       si               no      no      si               no       no      no
+## 16       no               no      no      no               si       no      no
+## 17       si               no      no      no               no       no      si
+## 18       si               si      no      no               si       si      no
+## 19       no               si      no      no               si       no      no
+## 20       no               no      si      si               si       si      si</code></pre>
+<p>Como puedes ver este data frame pertenece a las bacterias, desde aquí
+puedes escoger una bacteria de tu preferencia y al momento de responder
+las preguntas debes de contestar de acuerdo a las características
+descritas arriba. No es necesario que lo memorices, en cualquier momento
+puedes abrir este archivo para corroborar las características o si ya te
+crees muy microbiólogo lo puedes intentar en base a tus
+conocimientos</p>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
