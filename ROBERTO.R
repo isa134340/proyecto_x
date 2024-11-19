@@ -59,20 +59,20 @@ adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada 
 
 los_virus<-function(){
   #para identificar que onda
-  gen<-readline(prompt("que material genético tiene: dna/rna"))
-  cadena<-readline(prompt("cuantas cadenas tiene: doble/sencilla"))
-  envoltura<-readline(prompt("tiene envoltura: si/no"))
-  vectores<-readline(prompt("necesita de vectores: si/no"))
-  huesped<-readline(prompt("principalmente que afecta: humano/animal/planta/bacteria"))
-  enzima<-readline(prompt("usa retrotranscriptasa: si/no"))#si dice que si ya obvio es VIH
-  vacuna<-readline(prompt("la infección causada por tu virus tiene vacuna disponible?: si/no"))
-  trans<-readline(prompt("cuál es su forma principal de transmisión: sexual/contacto/saliva/sangre/fecal/vector/bacteria"))
+  gen<-readline(prompt="que material genético tiene: \n dna/rna ")
+  cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
+  envoltura<-readline(prompt="tiene envoltura: \n si/no ")
+  vectores<-readline(prompt="necesita de vectores: \n si/no ")
+  huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
+  enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")#si dice que si ya obvio es VIH
+  vacuna<-readline(prompt="la infección causada por tu virus tiene vacuna disponible?: \n si/no ")
+  trans<-readline(prompt="cuál es su forma principal de transmisión:\n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
   #no se como plantear la pregunta del género :/
   
   if(gen=="dna"){
     if(cadena=="sencilla"){
       if(envoltura=="no"){
-        if(vector=="si"){
+        if(vectores=="si"){
           if(huesped=="planta"){
             if(enzima=="no"){
               if(vacuna=="no"){
@@ -84,18 +84,16 @@ los_virus<-function(){
         }
       }
     }
-      }else if(cadena=="doble"){
+      }else{
         if(envoltura=="no"){
-        if(vector=="no"){
+        if(vectores=="no"){
           if(huesped=="humano"){
-            if(vacuna=="no"){
-              if(enzima=="no"){
+            if(enzima=="no"){
+              if(vacuna=="no"){
                 if(trans=="saliva"){
                   print("tu virus es un adenovirus")
                 }
-              }
-            }else if(vacuna=="si"){
-              if(enzima=="no"){
+              }else{
                 if(trans=="sexual"){
                   print("tu virus es el del VPH")
                 }
@@ -111,8 +109,8 @@ los_virus<-function(){
             }
           }
         }
-        }else if(envoltura=="si"){
-        if(vector=="no"){
+        }else{
+        if(vectores=="no"){
           if(huesped=="animal"){
             print("tu virus es la viruela símica")
           }else if(huesped=="humano"){
@@ -123,7 +121,12 @@ los_virus<-function(){
                 if(trans=="sexual"){
                   print("pensaste en el virus del herpes")
                 } else if(trans=="contacto"){
-                  print("mmm hay 2 opciones para tu respuesta: cytomegalovirus o epstein barr")
+                  viru1<-readline(prompt="pensaste en el cytomegalovirus?: si/no ")
+                  if(viru1=="si"){
+                    print("el virus en el que pensaste es cytomegalovirus")
+                  }else{
+                    print("el virus en el que pensaste es el de epstein-barr")
+                  }
                 }
               }
             }
@@ -136,12 +139,12 @@ los_virus<-function(){
       print("tu virus es el rotavirus")
     }else {
       if(envoltura=="no"){
-        if(vector=="si"){
+        if(vectores=="si"){
           print("tienes el virus del mosaico del tabaco")
         } else{ 
           print("tienes el virus de la polio")}
       }else{
-        if(vector=="si"){
+        if(vectores=="si"){
           if(huesped=="animal"){
             print("tu virus es el de la rabia, o sea lyssavirus")
           }else if(huesped=="humano"){
@@ -164,7 +167,12 @@ los_virus<-function(){
                 if(trans=="sangre"){
                   print("pensaste en el ébola")
                 }else if(trans=="saliva"){
-                  print("hay dos opciones para esto: el coronavirus o la influenza")
+                  viru2<-readline(prompt="tu virus pertenece al género influenzavirus?: si/no ")
+                  if(viru2=="no"){
+                    print("entonces pensaste en el coronavirus, no tuviste con la pandemia para dejar de pensar en el verdad?")
+                  } else{
+                    print("tu virus es el influenzavirus")
+                  }
                 }
               }
               }
@@ -175,3 +183,17 @@ los_virus<-function(){
     }
 }
 los_virus()
+###todavía falta resolver eso de que quedan preguntas con 2 virus ahí pero ya casi está listo :D
+#ya está resuelto lo de los 2 virus en las preguntas
+list(data.frame(virus=c("herpes","cytomegalovirus","coronavirus","pneumovirus","lyssavirus","influenza","VIH","rotavirus","flavivirus","viruela símica","Ébola","arenavirus","virus mosaico del tabaco","bacteriófago T4","hepatitis B","adenovirus","VPH","dengue","polio","virus mosaico de la coliflor","epstein-barr"),
+           material_genetico=c("DNA","DNA","RNA","RNA","RNA","RNA","RNA","RNA","RNA","DNA","RNA","RNA","RNA","DNA","DNA","DNA","DNA","RNA","RNA","DNA","DNA"),
+           Cadena=c("doble","doble","sencilla","sencilla","sencilla","sencilla","sencilla","doble","sencilla","doble","sencilla","sencilla","sencilla","doble","doble","doble","doble","sencilla","sencilla","sencilla","doble"),
+           envoltura=c("si","si","si","si","si","si","si","no","si","si","si","si","no","no","si","no","no","si","no","no","si"),
+           vector=   c("no","no","no","no","si","no","no","no","si","no","no","si","si","no","no","no","no","si","no","si","no"),
+           huesped=c("humano","humano","humano","humano","animal","humano","humano","animal","humano","animal","humano","humano","planta","bacteria","humano","humano","humano","humano","humano","planta","humano"),
+           retrotranscriptasa=c("no","no","no","no","no","no","si","no","no","no","no","no","no","no","no","no","no","no","no","no","no"),
+           vacuna=c("no","no","si","no","si","si","no","si","no","si","si","si","no","no","si","no","si","si","si","no","no"),
+           transmisión=c("sexual","contacto","saliva","saliva","saliva","saliva","sangre","fecal","vector","contacto","sangre","vector","vector","bacteria","sangre","saliva","sexual","vector","fecal","vector","contacto"),
+           género=c("Simplexvirus","Cytomegalovirus","Betacoronavirus","Pneumovirus","Lyssavirus","Influenzavirus","Lentivirus","Rotavirus","Flavivirus","Orthopoxvirus","Ebolavirus","Arenavirus","Tobamovirus","Tequatrovirus","Hepadnovirus","Adenovirus","Aplhapapillomavirus","Orthoflavivirus","Enterovirus","Caulimovirus","Lymphocryptovirus")
+           )->nuestrosvirusitos#podríamos poner todos los data.frames al inicio así como una lista para que muestre los 3 juntos y que así escojan el que quieran 
+nuestrosvirusitos

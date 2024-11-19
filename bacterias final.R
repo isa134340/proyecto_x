@@ -214,4 +214,6 @@ identificar_bacteria <- function() {
 }
 
 # Ejecutar la función
-identificar_bacteria()
+identificar_bacteria() 
+
+#si funciona ?
