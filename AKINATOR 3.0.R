@@ -172,6 +172,7 @@ hongo_adivina <- function(microorganismos){
             }
             if (genero_2 == "si") {
               print("Tu hongo es Lentinula edodes")
+              
             } else {
               print("Tu hongo es Ganoderma lucidum")
             }
@@ -198,6 +199,7 @@ hongo_adivina <- function(microorganismos){
                 print("Tu hongo es Agaricus bisporus")
               } else {
                 print("Tu hongo es Morchella esculenta")
+                ADN_analisis()
               }
             }
           } else {

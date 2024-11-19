@@ -44,7 +44,7 @@ adivina_microorganismos <- function(microorganismos){
             }
             if (genero_1 == "si") {
               print("Tu hongo es Lycoperdon pertulatum")
-              analisis_AA()
+              analisis_AA_2()
             } else {
               genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
               while (tolower(genero_2) != "si" & tolower(genero_2) != "no") {
@@ -52,8 +52,10 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (genero_2 == "si") {
                 print("Tu hongo es Lentinula edodes")
+                ADN_analisis()
               } else {
                 print("Tu hongo es Ganoderma lucidum")
+                ADN_analisis()
               }
             }
           } else {
@@ -69,6 +71,7 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (gen_1 == "si") {
                 print("Tu hongo es Lactarius indigo")
+                analisis_AA_2()
               } else {
                 gen_2 <- readline(prompt = "¿Tu hongo es del genero Agaricus? (si/no): ")
                 while (tolower(gen_2) != "si" & tolower(gen_2) != "no") {
@@ -76,12 +79,15 @@ adivina_microorganismos <- function(microorganismos){
                 }
                 if (gen_2 == "si") {
                   print("Tu hongo es Agaricus bisporus")
+                  ADN_analisis()
                 } else {
                   print("Tu hongo es Morchella esculenta")
+                  ADN_analisis()
                 }
               }
             } else {
               print("Tu hongo es Pleurotus ostreatus")
+              ADN_analisis()
             }
           }
         } else if (comestible == "no") {
@@ -92,8 +98,10 @@ adivina_microorganismos <- function(microorganismos){
           
           if (gen_4 == "si") {
             print("El hongo es Russula emetica")
+            ADN_analisis()
           } else {
             print("Los hongos son Amanita phalloides y Amanita gemmata")
+            ADN_analisis()
           }
         }
       } else {  # antibiotico == "si"
@@ -109,6 +117,7 @@ adivina_microorganismos <- function(microorganismos){
       
       if (antibiotico_2 == "si") {
         print("Tu microorganismo es Penicillium chrysogenum.")
+        ADN_analisis()
       } else {
         hifa <- readline(prompt = "¿Tiene hifa septada o no septada (escribe septada o no septada): ")
         while (tolower(hifa) != "septada" & tolower(hifa) != "no septada") {
@@ -128,8 +137,10 @@ adivina_microorganismos <- function(microorganismos){
             #print("Tu hongo puede ser Candida albicans o Cryptococcus neoformans")
             if (gen_6 == "si") {
               print("Tu hongo es Candida albicans")
+              ADN_analisis()
             } else {
               print("Tu hongo es Cryptococcus neoformans")
+              ADN_analisis()
             }
           }  else {
             saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
@@ -144,6 +155,7 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (gen_8 == "si"){
                 print("El hongo es Fusarium solani")
+                ADN_analisis()
               } else {
                 gen_9 <- readline(prompt = "¿El hongo es del genero Rhizopus? (si/no): ")
                 while (tolower(gen_9) != "si" & tolower(gen_9) !="no") {
@@ -151,15 +163,19 @@ adivina_microorganismos <- function(microorganismos){
                 } 
                 if (gen_9 == "si"){
                   print("Tu hongo es Rhizopus stolonifer")
-                } else {print("Tus hongos son Aspergillus fumigatus y Aspergillus niger")}
+                  ADN_analisis()
+                } else {print("Tus hongos son Aspergillus fumigatus y Aspergillus niger")
+                  ADN_analisis()}
               }
               
             } else {
               print("Tu hongo es Microsporum canis")
+              ADN_analisis()
             }
           }
         } else {
           print("Tu microorganismo es Claviceps purpurea.")
+          ADN_analisis()
         }
       }
     }
