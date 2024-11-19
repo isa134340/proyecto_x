@@ -557,7 +557,7 @@ adivina_microorganismos <- function(microorganismos){
   }
   
   # Ejecutar la función
-  identificar_bacteria()}
+  identificar_bacteria()}reinicio_juego()
 }  
 
 adivina_microorganismos(microorganismos)
