@@ -381,104 +381,99 @@ los_virus()
 
 
 
-##la según corrección 
-#else{#esto quiere decir arn
- # if(cadena=="doble"){
-  #  if(envoltura=="no"){
-   #   if(vector=="no"){
-    #    if(huesped=="animal"){
-     #     if(enzima=="no"){
-      #      if(vacuna=="si"){
-       #       if(trans=="fecal"){print("tienes el rotavirus")}
-        #  }
-#        }
-#      }
- #   }
-  #}
-#  }else{#esto quiere decir cadena sencilla
- #   if(envoltura=="no"){
-  #    if(vector=="si"){
-   ##       if(vacuna=="no"){
-     #         if(trans=="vector"){print("tienes el virus del mosaico del tabaco, género Tobamovirus")}
-      #      }
-       #   }
-#        }
- #     }else{
-  #      if(huesped=="humano"){
-   #       if(enzima=="no"){
-    #        if(vacuna=="si"){
-     ##      }
-       #   }
-        #}
-#      }
- #   }else{#esto significa si envoltura
-  #    if(vector=="si"){
-   #     if(huesped=="animal"){
-    #      if(enzima=="no"){
-     #       if(vacuna=="si"){
-      #        if(trans=="saliva"){print("tienes el virus de la rabia")}
-       #     }
-        #  }
-        #}#else if(huesped=="humano"){
-#          if(enzima=="no"){
- ##           if(vacuna=="no"){
-   #           if(trans=="vector"){print("tienes el flavivirus")}
-    #        }else{
-     #         if(trans=="vector"){print("tienes el arenavirus")}
-      #      }
-       #   }
-        #}
-#      }
- #   }
-  #}  
-    
-    
-    
-    
-    
-    
-#    {
- #   if(envoltura=="no"){
-  #    if(vectores=="si"){
-   #     print("tienes el virus del mosaico del tabaco")
-    #  } else{ 
-     #   print("tienes el virus de la polio")}
-#    }else{
- #     if(vectores=="si"){
-  #      if(huesped=="animal"){
-   #       print("tu virus es el de la rabia, o sea lyssavirus")
-    #    }else if(huesped=="humano"){
-     #     if(enzima=="no"){
-      #      if(vacuna=="si"){
-       #       print("pensaste en arenavirus")
-        #    }else{
-         #     print("pensaste en el flavivirus")
-          #  }
- #         }
-#        }
-#      }else{
- #       if(huesped=="humano"){
-  #        if(enzima=="si"){
-   #         print("pensaste en el VIH, o sea lentivirus")
-    #      }else{
-     #       if(vacuna=="no"){
-      #        print("tienes el pneumovirus")
-       #     } else{
-        #      if(trans=="sangre"){
-         #       print("pensaste en el ébola")
-          #    }else if(trans=="saliva"){
-           #     viru2<-readline(prompt="tu virus pertenece al género influenzavirus?: si/no ")
-            #    if(viru2=="no"){
-             #     print("entonces pensaste en el coronavirus, no tuviste con la pandemia para dejar de pensar en el verdad?")
-              #  } else{
-               #   print("tu virus es el influenzavirus")
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+
+###ES A PARTIR DE AQUÍ, ESTÁ TAL CUAL COMO LO TENÍAS EN EL MARKDOWN :D
+
+Para realizar el codigo utilizamos:\
+Funciones.\
+Condicionales IF.\
+Ciclos while.
+
+\*\*1.- Funciones.\*\* Las funciones son la parte del codigo que permite al usuario correr el juego sin estar corriendo el script cada que quiera jugar o volver a jugar. Se ocuparon cuatro funciones en total para la realizacion del juego.
+
+La función principal "adivina_microorganismo" tiene como estructura una serie de condicionales IF que permiten seguir el flujo del juego. Esta función incluye todas las preguntas necesarias para llegar a un microorganismo con las características.
+
+Además se utilizan elementos como cat(), readline() y ciclos while() para hacer el juego más visual, interactivo y a prueba de errores al momento de escribir las respuestas
+
+
+```{r inicio}
+cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
+cat("En este juego podras repasar tu conocimiento en microorganismos !\n")
+cat("¡Estas listo, vamos a jugar!")
+
+readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial
+while(tolower(micro_inicial) != "bacterias" & tolower(micro_inicial) != "hongos" & tolower(micro_inicial) != "virus") {
+  readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial } 
+```
+La segunda función empleada es el reinicio del juego, llamada reinicio_juego(), para esta función utilizamos los mismos elementos: readline(), ciclo while() y condicionales IF.\
+Esta función se coloca al final del codigo del juego para reiniciarlo.  
+
+```{r}
+reinicio_juego <- function() {
+  readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta
+  while (respuesta != "si" & respuesta !="no") {
+    readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta  
+  }
+  if (respuesta == "si") {
+    adivina_microorganismos(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
+  } else {
+    cat("¡Gracias por jugar! Adiós.\n")
   }
 }
+```
+
+Las dos últimas funciones son las que permiten al usuario colocar la secuencia de nucleótidos o de aminoácidos, del microorganismo que se adivinó.
+
+Esta función va a imprimir el tamaño de la secuencia, la secuencia, el reverso de la secuencia y la frecuencia de los nucleótidos, en esta el elemento clave es la funcion file.choose(), que permite elegir la secuencia desde la carpeta con los archivos sin establecer una dirección fija y permite jugar desde otros equipos mientras se tenga descargada la carpeta de las secuencias.  
+
+Además, en ambas funciones utilizamos cat() para hacer visualmente más presentables los resultados obtenidos del análisis.
+
+```{r}
+ADN_analisis<- function( ){
+  library(Biostrings)
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  
+  secuencia_ADN <- readDNAStringSet( file.choose())
+  
+  tamaño <- width(secuencia_ADN) 
+  reverso<- rev(secuencia_ADN) 
+  reverso_complementario <- reverseComplement(secuencia_ADN)
+  alfabeto<- alphabetFrequency(secuencia_ADN)
+  traducida<- translate(secuencia_ADN)
+  
+  cat("El tamaño de la secuencia es: ", tamaño, " nucleótidos\n")
+  cat("Frecuencia de los nucleótidos: \n")
+  print(alfabeto)
+  cat("Secuencia traducida es: \n")
+  print(traducida)
+  
+  
+  return(list(tamaño = tamaño, 
+              reverso = reverso, 
+              reverso_complementario = reverso_complementario, 
+              alfabeto = alfabeto, 
+              traducida=traducida))
 }
+
+ADN_analisis()
+```
+
+```{r warning=FALSE}
+analisis_AA_2 <- function() {
+  library(Biostrings)
+  cat("¡Ahora podrás conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitarás para esta parte!\n")
+  
+  secuencia <- readAAStringSet(file.choose())  
+  tamaño_aa <- width(secuencia)  # Calcula el tamaño de la secuencia de aminoácidos
+  
+  # Mostrar el resultado
+  cat("La secuencia tiene un tamaño de: ", tamaño_aa, " aminoácidos\n")
+  cat("La secuencia es:\n")
+  print(secuencia)
+  
+  # Devolver la secuencia y su tamaño
+  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
+}
+```
