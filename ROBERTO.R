@@ -60,35 +60,35 @@ adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada 
 los_virus<-function(){
   #para identificar que onda
   gen<-readline(prompt="que material genético tiene: \n dna/rna ")
-  while(tolower(gen)!="dna"|tolower(gen)!="rna"){
+  while(tolower(gen)!="dna" & tolower(gen)!="rna"){
     gen<-readline(prompt="que material genético tiene: \n dna/rna ")
   }
   cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
-  while(tolower(cadena)!="doble"|tolower(cadena)!="sencilla"){
+  while(tolower(cadena)!="doble" & tolower(cadena)!="sencilla"){
     cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
   }
   envoltura<-readline(prompt="tiene envoltura: \n si/no ")
-  while(tolower(envoltura)!="si"|tolower(envoltura)!="no"){
+  while(tolower(envoltura)!="si" & tolower(envoltura)!="no"){
     envoltura<-readline(prompt="tiene envoltura: \n si/no ")
   }
   vectores<-readline(prompt="necesita de vectores: \n si/no ")
-  while(tolower(vectores)!="si"|tolower(vectores)!="no"){
+  while(tolower(vectores)!="si" & tolower(vectores)!="no"){
     vectores<-readline(prompt="necesita de vectores: \n si/no ")
   }
   huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
-  while(tolower(huesped)!="humano"|tolower(huesped)!="animal"|tolower(huesped)!="planta"|tolower(huesped)!="bacteria"){
+  while(tolower(huesped)!="humano" & tolower(huesped)!="animal" & tolower(huesped)!="planta" & tolower(huesped)!="bacteria"){
     huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
   }
   enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")
-  while(tolower(enzima)!="si"|tolower(enzima)!="no"){
+  while(tolower(enzima)!="si" & tolower(enzima)!="no"){
     enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")
   }
   vacuna<-readline(prompt="cuenta con vacuna disponible?: \n si/no ")
-  while(tolower(vacuna)!="si"|tolower(vacuna)!="no"){
+  while(tolower(vacuna)!="si" & tolower(vacuna)!="no"){
     vacuna<-readline(prompt="cuenta con vacuna disponible?: \n si/no ")
   }
   trans<-readline(prompt="cuál es su forma principal de transmisión:\n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
-  while(tolower(trans)!="sexual"|tolower(trans)!="contacto"|tolower!="saliva"|tolower!="sangre"|tolower!="fecal"|tolower!="vector"|tolower!="bacteria"){
+  while(tolower(trans)!="sexual" & tolower(trans)!="contacto" & tolower!="saliva" & tolower!="sangre" & tolower!="fecal" & tolower!="vector" & tolower!="bacteria"){
     trans<-readline(prompt="cual es su forma principal de transmisión: \n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
   }
   #no se como plantear la pregunta del género :/
