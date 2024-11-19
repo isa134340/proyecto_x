@@ -582,4 +582,61 @@ adivina_microorganismos <- function(microorganismos){
 
 adivina_microorganismos(microorganismos)
 
-####
+########################################
+#PARA REINICIAR EL JUEGO; ES UNA FUNCION APARTE.
+reinicio_juego <- function() {
+  readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta
+  while (respuesta != "si" & respuesta !="no") {
+    readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta  
+  }
+  if (respuesta == "si") {
+    hongo_adivina(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
+  } else {
+    cat("¡Gracias por jugar! Adiós.\n")
+  }
+}
+#################################################
+ADN_analisis<- function( ){
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  
+  secuencia_ADN <- readDNAStringSet( file.choose())
+  
+  tamaño <- width(secuencia_ADN) 
+  reverso<- rev(secuencia_ADN) 
+  reverso_complementario <- reverseComplement(secuencia_ADN)
+  alfabeto<- alphabetFrequency(secuencia_ADN)
+  traducida<- translate(secuencia_ADN)
+  
+  cat("El tamaño de la secuencia es: ", tamaño, " nucleótidos\n")
+  cat("Frecuencia de los nucleótidos: \n")
+  print(alfabeto)
+  cat("Secuencia traducida es: \n")
+  print(traducida)
+  
+  
+  return(list(tamaño = tamaño, 
+              reverso = reverso, 
+              reverso_complementario = reverso_complementario, 
+              alfabeto = alfabeto, 
+              traducida=traducida))
+}
+
+ADN_analisis()
+#################################################################
+analisis_AA_2 <- function() {
+  cat("¡Ahora podrás conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitarás para esta parte!\n")
+  
+  secuencia <- readAAStringSet(file.choose())  
+  tamaño_aa <- width(secuencia)  # Calcula el tamaño de la secuencia de aminoácidos
+  
+  # Mostrar el resultado
+  cat("La secuencia tiene un tamaño de: ", tamaño_aa, " aminoácidos\n")
+  cat("La secuencia es:\n")
+  print(secuencia)
+  
+  # Devolver la secuencia y su tamaño
+  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
+}
+########################################################################33
