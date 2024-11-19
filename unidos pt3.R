@@ -1,6 +1,6 @@
 #UNIDOS PT3
 adivina_microorganismos <- function(microorganismos){
-  
+  library(Biostrings)
   cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
   cat("En este juego podras repasar tu conocimiento en microorganismos !\n")
   cat("¡Estas listo, vamos a jugar!")
