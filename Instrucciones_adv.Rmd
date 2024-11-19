@@ -7,10 +7,6 @@ date: "Bioinformática"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-
-```
-
 # **Bienvenido al juego de Adivina Quien! **
 ### **Esta versión es sobre microorganismos**
 
@@ -44,10 +40,7 @@ bacterias
 Como puedes ver este data frame pertenece a las bacterias, desde aquí puedes escoger una bacteria de tu preferencia y al momento de responder las preguntas debes de contestar de acuerdo a las características descritas arriba. No es necesario que lo memorices, en cualquier momento puedes abrir este archivo para corroborar las características o si ya te crees muy microbiólogo lo puedes intentar en base a tus conocimientos 
 
 
-<<<<<<< HEAD
 ## Hongos
-
-Aquí vas a ver el data frame de los hongos y sus características
 ```{r, echo=FALSE}
 data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillus niger","Rhizopus stolonifer","Daviceps purpurea","Cryptococcus neoformans","Microsporum canis", "Lycoperdon pertulatum","Russula emetica","Lactarius indigo","Amanita gemmata","Fusarium solani","Agricus bisporus","Amanita phalloides","Lentinula edodes","Pleurotus ostreatus","Morchella esculenta","Ganoderma lucidum"),
   hifa=c("no septada","septada","no septada","no septada","septada","no septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada"),
@@ -64,29 +57,3 @@ data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillu
 )->hongos
 hongos
 ```
-
-
-
-
-Para realizar el codigo utilizamos:\
-Funciones.\
-Condicionales IF.\
-Ciclos while.
-
-\*\*1.- Funciones.\*\* Las funciones son la parte del codigo que permite al usuario correr el juego sin estar corriendo el script cada que quiera jugar o volver a jugar. Se ocuparon cuatro funciones en total para la realizacion del juego.
-
-La función principal "adivina_microorganismo" tiene como estructura una serie de condicionales IF que permiten seguir el flujo del juego. Esta función incluye todas las preguntas necesarias para llegar a un microorganismo con las características.
-
-Además se utilizan elementos como cat(), readline() y ciclos while() para hacer el juego más visual, interactivo y a prueba de errores al momento de escribir las respuestas
-
-
-```{r inicio}
-cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
-  cat("En este juego podras repasar tu conocimiento en microorganismos !\n")
-  cat("¡Estas listo, vamos a jugar!")
-  
-  readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial
-  while(tolower(micro_inicial) != "bacterias" & tolower(micro_inicial) != "hongos" & tolower(micro_inicial) != "virus") {
-    readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial } 
-```
-
