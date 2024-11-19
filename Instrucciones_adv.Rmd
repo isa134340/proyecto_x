@@ -1,25 +1,27 @@
 ---
-title: "Instrucciones"
-author: "Alondra Domínguez,  
-  Isabel Herrera y
+title: "Instrucciones de juego"
+author: "Alondra Domínguez
+
+  Isabel Herrera
+  
   David Flores"
 date: "Bioinformática"
 output: html_document
 ---
 
 # **Bienvenido al juego de Adivina Quien! **
-### **Esta versión es sobre microorganismos**
+##### **Esta versión es sobre microorganismos**
 
 Realizamos este juego para brindar una opción más divertida para aprender características de algunos microorganismos que hemos visto y seguramente veremos en futuras clases, al menos nosotros nos las aprendimos después de tantos intentos de correr los códigos... :c
 
 
 El programa se basa en una serie de preguntas en donde trata de "advinar" el microorganismo que elegiste.
 
-## **Bases de datos**
+### **Bases de datos**
 
 Realizamos 3 bases para distintos tipos de microorganismos: bacterias, hongos y virus. Cada una de ellas consisitió en 20 ejemplos de cada microorganismo poniendo en las columnas características distintivas de cada uno de ellos. Puedes ver las bases de datos en el siguiente código:
 
-## Bacterias
+## __Bacterias__
 ```{r,echo=FALSE}
 data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aureus","Moraxella catarrhalis","Vibrio cholerae","Bacillus anthracis","Salmonella enterica","Escherichia coli","Clostridium botulinum","Listeria monocytogenes","Bacillus thuringiensis","Vibrio fischeri","Mycobacterium tuberculosis","Azotobacter chroococcum","Clostridium tetani","Bifidobacterium","Neisseria gonorrhoeae","Klebsiella pneunmoniae","Lactobacillus acidophilus","Bacillus subtilis"),
   gram=c("positiva","positiva","positiva","negativa","negativa","positiva","negativa","negativa","positiva","positiva","positiva","negativa","NA","negativa","positiva","positiva","negativa","negativa","positiva","positiva"),
@@ -37,7 +39,7 @@ data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aure
 bacterias
 ```
 
-## Hongos
+## __Hongos__
 ```{r, echo=FALSE}
 data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillus niger","Rhizopus stolonifer","Daviceps purpurea","Cryptococcus neoformans","Microsporum canis", "Lycoperdon pertulatum","Russula emetica","Lactarius indigo","Amanita gemmata","Fusarium solani","Agricus bisporus","Amanita phalloides","Lentinula edodes","Pleurotus ostreatus","Morchella esculenta","Ganoderma lucidum"),
   hifa=c("no septada","septada","no septada","no septada","septada","no septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada"),
@@ -55,7 +57,7 @@ data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillu
 hongos
 ```
 
-## Virus
+## __Virus__
 ```{r,echo=FALSE}
 data.frame(virus=c("Herpes","Cytomegalovirus","Coronavirus","Pneumovirus","Lyssavirus (rabia)","Influenza","VIH","Rotavirus","Flavivirus","Viruela símica","Ébola","Arenavirus","Mosaico del tabaco","Bacteriófago T4","Hepatitis B","Adenovirus","VPH","Dengue","Polio","Mosaico de la coliflor","Epstein-Barr"),
            material_genetico=c("dna","dna","rna","rna","rna","rna","rna","rna","rna","dna","rna","rna","rna","dna","dna","dna","dna","rna","rna","dna","dna"),
@@ -70,12 +72,12 @@ data.frame(virus=c("Herpes","Cytomegalovirus","Coronavirus","Pneumovirus","Lyssa
 virus
 ```
 
-##### En base a los datos anteriores puedes escoger el microorganismo de tu preferencia y posteriormente correr el programa para comenzar con las preguntas, para poder jugar correctamente debes de:
+En base a los datos anteriores puedes escoger el microorganismo de tu preferencia y posteriormente correr el programa para comenzar con las preguntas, para poder jugar correctamente debes de:
 
-__1. NO cambiar de microorganismo en el transcurso de las preguntas__
+##### __1. NO cambiar de microorganismo en el transcurso de las preguntas__
 
-__2. Contestar SOLO con las palabras que te muestre la consola, de lo contrario no pasarás de pregunta__
+##### __2. Contestar SOLO con las palabras que te muestre la consola, de lo contrario no pasarás de pregunta__
 
-__3. Deja correr el juego hasta que termine__
+##### __3. Deja correr el juego hasta que termine__
 
 
