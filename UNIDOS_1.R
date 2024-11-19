@@ -8,10 +8,10 @@ adivina_microorganismos <- function(microorganismos){
     readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial  
   }
 
-} #EL DE LA FUNCION.
+
 
   
-  micro_inicial <- readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos):  ") 
+  
 if( micro_inicial == "bacteria" ){identificar_bacteria <- function() {
   # Preguntas iniciales
   gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
@@ -225,4 +225,6 @@ if( micro_inicial == "bacteria" ){identificar_bacteria <- function() {
 }
 }} 
   
+  
+} #EL DE LA FUNCION. 
   
