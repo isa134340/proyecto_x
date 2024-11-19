@@ -1,6 +1,6 @@
 #UNIDOS PT3
 adivina_microorganismos <- function(microorganismos){
-  
+  library(Biostrings)
   cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
   cat("En este juego podras repasar tu conocimiento en microorganismos !\n")
   cat("¡Estas listo, vamos a jugar!")
@@ -44,7 +44,7 @@ adivina_microorganismos <- function(microorganismos){
             }
             if (genero_1 == "si") {
               print("Tu hongo es Lycoperdon pertulatum")
-              analisis_AA()
+              analisis_AA_2()
             } else {
               genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
               while (tolower(genero_2) != "si" & tolower(genero_2) != "no") {
@@ -52,8 +52,10 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (genero_2 == "si") {
                 print("Tu hongo es Lentinula edodes")
+                ADN_analisis()
               } else {
                 print("Tu hongo es Ganoderma lucidum")
+                ADN_analisis()
               }
             }
           } else {
@@ -69,6 +71,7 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (gen_1 == "si") {
                 print("Tu hongo es Lactarius indigo")
+                analisis_AA_2()
               } else {
                 gen_2 <- readline(prompt = "¿Tu hongo es del genero Agaricus? (si/no): ")
                 while (tolower(gen_2) != "si" & tolower(gen_2) != "no") {
@@ -76,12 +79,15 @@ adivina_microorganismos <- function(microorganismos){
                 }
                 if (gen_2 == "si") {
                   print("Tu hongo es Agaricus bisporus")
+                  ADN_analisis()
                 } else {
                   print("Tu hongo es Morchella esculenta")
+                  ADN_analisis()
                 }
               }
             } else {
               print("Tu hongo es Pleurotus ostreatus")
+              ADN_analisis()
             }
           }
         } else if (comestible == "no") {
@@ -92,8 +98,10 @@ adivina_microorganismos <- function(microorganismos){
           
           if (gen_4 == "si") {
             print("El hongo es Russula emetica")
+            ADN_analisis()
           } else {
             print("Los hongos son Amanita phalloides y Amanita gemmata")
+            ADN_analisis()
           }
         }
       } else {  # antibiotico == "si"
@@ -109,6 +117,7 @@ adivina_microorganismos <- function(microorganismos){
       
       if (antibiotico_2 == "si") {
         print("Tu microorganismo es Penicillium chrysogenum.")
+        ADN_analisis()
       } else {
         hifa <- readline(prompt = "¿Tiene hifa septada o no septada (escribe septada o no septada): ")
         while (tolower(hifa) != "septada" & tolower(hifa) != "no septada") {
@@ -128,8 +137,10 @@ adivina_microorganismos <- function(microorganismos){
             #print("Tu hongo puede ser Candida albicans o Cryptococcus neoformans")
             if (gen_6 == "si") {
               print("Tu hongo es Candida albicans")
+              ADN_analisis()
             } else {
               print("Tu hongo es Cryptococcus neoformans")
+              ADN_analisis()
             }
           }  else {
             saprofito <- readline(prompt = "¿Es saprofito (si/no): ")
@@ -144,6 +155,7 @@ adivina_microorganismos <- function(microorganismos){
               }
               if (gen_8 == "si"){
                 print("El hongo es Fusarium solani")
+                ADN_analisis()
               } else {
                 gen_9 <- readline(prompt = "¿El hongo es del genero Rhizopus? (si/no): ")
                 while (tolower(gen_9) != "si" & tolower(gen_9) !="no") {
@@ -151,15 +163,19 @@ adivina_microorganismos <- function(microorganismos){
                 } 
                 if (gen_9 == "si"){
                   print("Tu hongo es Rhizopus stolonifer")
-                } else {print("Tus hongos son Aspergillus fumigatus y Aspergillus niger")}
+                  ADN_analisis()
+                } else {print("Tus hongos son Aspergillus fumigatus y Aspergillus niger")
+                  ADN_analisis()}
               }
               
             } else {
               print("Tu hongo es Microsporum canis")
+              ADN_analisis()
             }
           }
         } else {
           print("Tu microorganismo es Claviceps purpurea.")
+          ADN_analisis()
         }
       }
     }
@@ -566,4 +582,61 @@ adivina_microorganismos <- function(microorganismos){
 
 adivina_microorganismos(microorganismos)
 
-####
+########################################
+#PARA REINICIAR EL JUEGO; ES UNA FUNCION APARTE.
+reinicio_juego <- function() {
+  readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta
+  while (respuesta != "si" & respuesta !="no") {
+    readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta  
+  }
+  if (respuesta == "si") {
+    adivina_microorganismos(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
+  } else {
+    cat("¡Gracias por jugar! Adiós.\n")
+  }
+}
+#################################################
+ADN_analisis<- function( ){
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  
+  secuencia_ADN <- readDNAStringSet( file.choose())
+  
+  tamaño <- width(secuencia_ADN) 
+  reverso<- rev(secuencia_ADN) 
+  reverso_complementario <- reverseComplement(secuencia_ADN)
+  alfabeto<- alphabetFrequency(secuencia_ADN)
+  traducida<- translate(secuencia_ADN)
+  
+  cat("El tamaño de la secuencia es: ", tamaño, " nucleótidos\n")
+  cat("Frecuencia de los nucleótidos: \n")
+  print(alfabeto)
+  cat("Secuencia traducida es: \n")
+  print(traducida)
+  
+  
+  return(list(tamaño = tamaño, 
+              reverso = reverso, 
+              reverso_complementario = reverso_complementario, 
+              alfabeto = alfabeto, 
+              traducida=traducida))
+}
+
+ADN_analisis()
+#################################################################
+analisis_AA_2 <- function() {
+  cat("¡Ahora podrás conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitarás para esta parte!\n")
+  
+  secuencia <- readAAStringSet(file.choose())  
+  tamaño_aa <- width(secuencia)  # Calcula el tamaño de la secuencia de aminoácidos
+  
+  # Mostrar el resultado
+  cat("La secuencia tiene un tamaño de: ", tamaño_aa, " aminoácidos\n")
+  cat("La secuencia es:\n")
+  print(secuencia)
+  
+  # Devolver la secuencia y su tamaño
+  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
+}
+########################################################################33
