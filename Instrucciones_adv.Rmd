@@ -37,9 +37,6 @@ data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aure
 bacterias
 ```
 
-Como puedes ver este data frame pertenece a las bacterias, desde aquí puedes escoger una bacteria de tu preferencia y al momento de responder las preguntas debes de contestar de acuerdo a las características descritas arriba. No es necesario que lo memorices, en cualquier momento puedes abrir este archivo para corroborar las características o si ya te crees muy microbiólogo lo puedes intentar en base a tus conocimientos 
-
-
 ## Hongos
 ```{r, echo=FALSE}
 data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillus niger","Rhizopus stolonifer","Daviceps purpurea","Cryptococcus neoformans","Microsporum canis", "Lycoperdon pertulatum","Russula emetica","Lactarius indigo","Amanita gemmata","Fusarium solani","Agricus bisporus","Amanita phalloides","Lentinula edodes","Pleurotus ostreatus","Morchella esculenta","Ganoderma lucidum"),
@@ -72,4 +69,6 @@ data.frame(virus=c("Herpes","Cytomegalovirus","Coronavirus","Pneumovirus","Lyssa
            )->virus
 virus
 ```
+
+En base a los datos anteriores puedes escoger el microorganismo de tu preferencia y posteriormente correr el programa para comenzar con las preguntas, para poder jugar correctamente debes de:
 
