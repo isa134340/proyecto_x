@@ -6,7 +6,7 @@ adivina_microorganismos <- function(microorganismos){
   readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial
   while(tolower(micro_inicial) != "bacteria" & tolower(micro_inicial) != "hongos" & tolower(micro_inicial) != "virus") {
     readline(prompt = "Por favor escriba el nombre con el grupo de microrganismos que desea jugar (bacterias, virus o hongos): ") -> micro_inicial  
-  
+  }
   
   
   
