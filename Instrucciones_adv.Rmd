@@ -1,0 +1,41 @@
+---
+title: "Instrucciones"
+author: "Alondra Domínguez,  
+  Isabel Herrera y
+  David Flores"
+date: "Bioinformática"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+```
+
+# Bienvenido al juego de Adivina Quien! 
+### Esta versión es sobre microorganismos
+
+Realizamos este juego para brindar una opción más divertida para aprender características de algunos microorganismos que hemos visto y seguramente veremos en futuras clases, al menos nosotros nos las aprendimos después de tantos intentos de correr los códigos... :c
+
+
+El programa se basa en una serie de preguntas en donde trata de "advinar" el microorganismo que elegiste.
+
+## Bases de datos
+
+Realizamos 3 bases para distintos tipos de microorganismos: bacterias, hongos y virus. Cada una de ellas consisitió en 20 ejemplos de cada microorganismo poniendo en las columnas características distintivas de cada uno de ellos. Puedes ver las bases de datos en el siguiente código
+
+```{r}
+data.frame(hola=c("hola","Adios"),
+           adios=c("adios","hola"))->cosita
+cosita
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
