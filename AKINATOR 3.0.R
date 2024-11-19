@@ -310,13 +310,43 @@ class(secuencia)
 ##########################################
 library(Biostrings)
 library(BiocGenerics)
+library()
 
 
-hongo_secuencia <- function( ){
+analisis_AA <- function( ){
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
   secuencia <- readAAStringSet(file.choose())
   tamaño_aa<- width(secuencia)
-  return(secuencia)
-  return(tamaño_aa)
+  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
 }
 
-hongo_secuencia()
+analisis_AA
+
+ADN_analisis<- function( ){
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  secuencia_ADN <- readDNAStringSet( file.choose())
+  tamaño <- width(secuencia_ADN) 
+  reverso<- rev(secuencia_ADN) 
+  reverso_complementario <- reverseComplement(secuencia_ADN)
+  alfabeto<- alphabetFrequency(secuencia_ADN)
+  traducida<- translate(secuencia_ADN)
+  return(list(tamaño = tamaño, reverso = reverso, reverso_complementario = reverso_complementario, alfabeto = alfabeto, traducida=traducida))
+}
+
+ADN_analisis()
+
+ARN_analisis<- function( ){
+  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  secuencia_ARN <- readRNAStringSet( file.choose())
+  tamaño <- width(secuencia_ARN) 
+  reverso<- rev(secuencia_ARN) 
+  reverso_complementario <- reverseComplement(secuencia_ARN)
+  alfabeto<- alphabetFrequency(secuencia_ARN)
+  traducida<- translate(secuencia_ARN)
+  return(list(tamaño = tamaño, reverso = reverso, reverso_complementario = reverso_complementario, alfabeto = alfabeto, traducida=traducida))
+}
+
+RNA_analisis( )
