@@ -21,8 +21,9 @@ El programa se basa en una serie de preguntas en donde trata de "advinar" el mic
 
 ## Bases de datos
 
-Realizamos 3 bases para distintos tipos de microorganismos: bacterias, hongos y virus. Cada una de ellas consisitió en 20 ejemplos de cada microorganismo poniendo en las columnas características distintivas de cada uno de ellos. Puedes ver las bases de datos en el siguiente código: 
+Realizamos 3 bases para distintos tipos de microorganismos: bacterias, hongos y virus. Cada una de ellas consisitió en 20 ejemplos de cada microorganismo poniendo en las columnas características distintivas de cada uno de ellos. Puedes ver las bases de datos en el siguiente código:
 
+## Bacterias
 ```{r,echo=FALSE}
 data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aureus","Moraxella catarrhalis","Vibrio cholerae","Bacillus anthracis","Salmonella enterica","Escherichia coli","Clostridium botulinum","Listeria monocytogenes","Bacillus thuringiensis","Vibrio fischeri","Mycobacterium tuberculosis","Azotobacter chroococcum","Clostridium tetani","Bifidobacterium","Neisseria gonorrhoeae","Klebsiella pneunmoniae","Lactobacillus acidophilus","Bacillus subtilis"),
   gram=c("positiva","positiva","positiva","negativa","negativa","positiva","negativa","negativa","positiva","positiva","positiva","negativa","NA","negativa","positiva","positiva","negativa","negativa","positiva","positiva"),
@@ -41,6 +42,28 @@ bacterias
 ```
 
 Como puedes ver este data frame pertenece a las bacterias, desde aquí puedes escoger una bacteria de tu preferencia y al momento de responder las preguntas debes de contestar de acuerdo a las características descritas arriba. No es necesario que lo memorices, en cualquier momento puedes abrir este archivo para corroborar las características o si ya te crees muy microbiólogo lo puedes intentar en base a tus conocimientos 
+
+
+## Hongos
+
+Aquí vas a ver el data frame de los hongos y sus características
+```{r, echo=FALSE}
+data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillus niger","Rhizopus stolonifer","Daviceps purpurea","Cryptococcus neoformans","Microsporum canis", "Lycoperdon pertulatum","Russula emetica","Lactarius indigo","Amanita gemmata","Fusarium solani","Agricus bisporus","Amanita phalloides","Lentinula edodes","Pleurotus ostreatus","Morchella esculenta","Ganoderma lucidum"),
+  hifa=c("no septada","septada","no septada","no septada","septada","no septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada","septada"),
+  tamaño=c("micro","micro","micro","micro","micro","micro","micro","macro","macro","macro","macro","micro","macro","macro","macro","macro","macro","macro"),
+  antibiotico=c("no","si","no","no","no","no","no","no","no","no","no","no","no","no","no","no","no","no"),
+  comestible=c("no","no","no","no","no","no","no","si","no","si","no","no","si","no","si","si","si","si"),
+  celula=c("hifa","hifa","hifa","hifa","hifa","levadura","hifa","hifa","hifa","hifa","hifa","hifa","hifa","hifa","hifa","hifa","hifa","hifa"),
+  medicinal=c("no","no","no","no","no","no","no","si","no","no","no","no","no","no","si","no","no","si"),
+  toxico=c("no","no","no","no","si","no","no","no","si","no","si","no","no","si","no","no","no","no"),
+  celular=c("multi","multi","multi","multi","multi","uni","multi","multi","multi","multi","multi","multi","multi","multi","multi","multi","multi","multi"),
+  parasito=c("no","no","no","si","si","no","no","no","no","no","no","no","no","no","no","no","no","no"),
+  saprofito=c("si","si","si","si","no","no","no","si","no","no","no","si","si","no","si","si","no","si"),
+  patogeno=c("si","si","si","si","no","si","si","no","no","no","no","si","no","no","no","no","no","no")
+)->hongos
+hongos
+```
+
 
 
 ## Including Plots
