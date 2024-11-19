@@ -70,5 +70,12 @@ data.frame(virus=c("Herpes","Cytomegalovirus","Coronavirus","Pneumovirus","Lyssa
 virus
 ```
 
-En base a los datos anteriores puedes escoger el microorganismo de tu preferencia y posteriormente correr el programa para comenzar con las preguntas, para poder jugar correctamente debes de:
+##### En base a los datos anteriores puedes escoger el microorganismo de tu preferencia y posteriormente correr el programa para comenzar con las preguntas, para poder jugar correctamente debes de:
+
+__1. NO cambiar de microorganismo en el transcurso de las preguntas__
+
+__2. Contestar SOLO con las palabras que te muestre la consola, de lo contrario no pasarás de pregunta__
+
+__3. Deja correr el juego hasta que termine__
+
 
