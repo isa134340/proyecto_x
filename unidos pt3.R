@@ -668,6 +668,7 @@ reinicio_juego <- function() {
 }
 #################################################
 ADN_analisis<- function( ){
+  library(Biostrings)
   cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
   cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
   
@@ -696,6 +697,7 @@ ADN_analisis<- function( ){
 ADN_analisis()
 #################################################################
 analisis_AA_2 <- function() {
+  library(Biostrings)
   cat("¡Ahora podrás conocer datos sobre la secuencia de tu microorganismo!\n")
   cat("Recuerda el nombre de tu microorganismo, lo necesitarás para esta parte!\n")
   
