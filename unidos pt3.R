@@ -647,7 +647,6 @@ adivina_microorganismos <- function(microorganismos){
   }
 }
 }
-identificar_bacteria()
   reinicio_juego()
 
 }  
