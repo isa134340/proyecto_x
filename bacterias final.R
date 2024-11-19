@@ -207,12 +207,9 @@ identificar_bacteria <- function() {
     }
   } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
   if (genero == "sí") {
-    print("La bacteria es Mycobacterium tuberculosis:")
-  } else if (genero == "no") { genero2<- (prompt = "La bacteria pertenece al genero Chlamydia (sí/ no):")
-  if (genero1 == sí ){print ("La bacteria es Chlamydia trachomatis")}
-  else {print (print ("La bacteria es Rickettsia ricketsii "))} }}
+    print("La bacteria es Mycobacterium tuberculosis:")}
 }
-
+}
 # Ejecutar la función
 identificar_bacteria() 
 
