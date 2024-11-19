@@ -12,7 +12,7 @@ adivina_microorganismos <- function(microorganismos){
 
   
   
-if( micro_inicial == "bacteria" ){identificar_bacteria <- function() {
+if( micro_inicial == "bacterias" ){identificar_bacteria <- function() {
   # Preguntas iniciales
   gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
   morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
@@ -227,4 +227,5 @@ if( micro_inicial == "bacteria" ){identificar_bacteria <- function() {
   
   
 } #EL DE LA FUNCION. 
-  
+
+adivina_microorganismos(microorganismo)  
