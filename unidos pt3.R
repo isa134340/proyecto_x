@@ -286,21 +286,51 @@ adivina_microorganismos <- function(microorganismos){
       }
     }#aquí acaba todo lo de los virus
   } else if (micro_inicial == "bacterias" ) {identificar_bacteria <- function() {
-    # Preguntas iniciales
+   # Preguntas iniciales
     gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
     while(tolower(gram) != "positiva" & tolower(gram) != "negativa" & tolower(gram) != "NA") { #corchete del while
       gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")  
     } #corchete del while 
     morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
+    while (tolower (morfologia) != "coco" & tolower (morfologia) != "bacilo" ){
+      morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
+      }#corchete while 
     respiracion <- readline(prompt = "¿La bacteria es aerobia o anaerobia? (aerobio/anaerobio): ")
+    while (tolower (respiracion) != "aerobio" & tolower (respiracion ) !="anaerobio"){
+      respiracion <- readline(prompt = "¿La bacteria es aerobia o anaerobia? (aerobio/anaerobio): ")
+    } #corchete while
     motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
+    while (tolower (motilidad) != "si" & tolower (motilidad) !="sí" & tolower (motilidad) != "no"){
+      motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
+    } #corchete while
     patogena <- readline(prompt = "¿La bacteria es patógena? (sí/no): ")
+    while (tolower (patogena) != "si" & tolower (patogena) !="sí" & tolower (patogena) != "no"){
+      patogena <- readline(prompt = "¿La bacteria es patógena? (sí/no): ")
+    }
     fermentadora_de_lactosa <- readline(prompt = "¿La bacteria fermenta la lactosa? (sí/no): ")
+    while (tolower (fermentadora_de_lactosa) != "si" & tolower (fermentadora_de_lactosa) !="sí" & tolower (fermentadora_de_lactosa) != "no"){
+      fermentadora_de_lactosa <- readline(prompt = "¿La bacteria fermenta la lactosa? (sí/no): ")
+    }
     flagelos <- readline(prompt = "¿La bacteria tiene flagelos? (sí/no): ")
+    while (tolower (flagelos) != "si" & tolower (flagelos) !="sí" & tolower (flagelos) != "no"){
+      flagelos <- readline(prompt = "¿La bacteria tiene flagelos? (sí/no): ")
+    }
     esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
+    while (tolower (esporas) != "si" & tolower (esporas) !="sí" & tolower (esporas) != "no") {
+      esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
+    }
     fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
+    while (tolower (fermentadora_de_glucosa) != "si" & tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
+      fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
+    }
     catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
+    while (tolower (catalasa) != "si" & tolower (catalasa) !="sí" & tolower (catalasa) != "no"){
+      catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
+    }
     oxidasa <- readline (prompt= "La bacteria es oxidasa positiva? (sí/no)")
+    while (tolower (oxidasa) != "si" & tolower (oxidasa) !="sí" & tolower (oxidasa) != "no") {
+      oxidasa <- readline (prompt= "La bacteria es oxidasa positiva? (sí/no)")
+    }
     
     # Identificación de la bacteria
     if (gram == "positiva") {
