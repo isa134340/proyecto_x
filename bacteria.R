@@ -1,6 +1,6 @@
 identificar_bacteria <- function() {
   # Preguntas iniciales
-  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")
+  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
   morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
   respiracion <- readline(prompt = "¿La bacteria es aerobia o anaerobia? (aerobio/anaerobio): ")
   motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
@@ -10,6 +10,7 @@ identificar_bacteria <- function() {
   esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
   fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
   catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
+  oxidasa <- readline (prompt= "La bacteria es oxidasa positiva? (sí/no)")
   
   # Identificación de la bacteria
   if (gram == "positiva") {
@@ -31,46 +32,67 @@ identificar_bacteria <- function() {
               }
             }
           }
+        } else if (patogena== "no") {
+          if (fermentadora_de_lactosa == "no") {
+            if (flagelos == "sí") {
+              if (esporas == "no") {
+                if (fermentadora_de_glucosa == "sí") {
+                  if (catalasa == "sí") {
+                    print("La bacteria es Vibrio fisheri")}
+                }
+              }
+            }
+          }
         }
       }
     } else if (morfologia == "bacilo") {
-      if (respiracion == "anaerobio") {
+      if (respiracion == "anaerobio"){
         if (motilidad == "no") {
           if (patogena == "no") {
             if (fermentadora_de_lactosa == "sí") {
               if (flagelos == "no") {
                 if (esporas == "no") {
                   if (fermentadora_de_glucosa == "sí") {
-                    if (catalasa == "no") {
-                      print("La bacteria es Lactobacillus casei")
+                    if (catalasa == "no"){
+                      casei<- readline(prompt = "La bacteria es Lactobacillus casei?") 
+                      { if (casei == "sí")
+                      {  print("La bacteria es Lactobacillus casei")
+                      }  else if ( casei == "no") 
+                      { print( "La bacteria es Lactobacillus acidophilus")}
+                      }
                     }
                   }
                 }
               }
-            }
-          } else if (patogena == "sí") {
-            if (fermentadora_de_lactosa == "no") {
-              if (flagelos == "no") {
-                if (esporas == "sí") {
-                  if (fermentadora_de_glucosa == "no") {
-                    if (catalasa == "no") {
-                      print("La bacteria es Clostridium botulinum")
+            } else if (patogena == "sí") {
+              if (fermentadora_de_lactosa == "no") {
+                if (flagelos == "no") {
+                  if (esporas == "sí") {
+                    if (fermentadora_de_glucosa == "no") {
+                      if (catalasa == "no"){ 
+                        botulinum<- readline(prompt = "La bacteria es Clostridium botulinum?") 
+                        { if (botulinum == "sí")
+                        {  print("La bacteria es Clostridium botulinum")
+                        }  else if ( botulinum == "no") 
+                        { print( "La bacteria es Clostridium tetani")}
+                        }
+                      } 
                     }
                   }
-                }
-              } else if (flagelos == "sí") {
-                if (esporas == "no") {
-                  if (fermentadora_de_glucosa == "sí") {
-                    if (catalasa == "sí") {
-                      print("La bacteria es Listeria monocytogenes")
+                } else if (flagelos == "sí") {
+                  if (esporas == "no") {
+                    if (fermentadora_de_glucosa == "sí") {
+                      if (catalasa == "sí") {
+                        print("La bacteria es Listeria monocytogenes")
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      } else if (respiracion == "aerobio") {
+        } 
+      } else if (respiracion == "aerobio"){
         if (motilidad == "no") {
           if (patogena == "sí") {
             if (fermentadora_de_lactosa == "no") {
@@ -101,7 +123,7 @@ identificar_bacteria <- function() {
           if (patogena == "no") {
             if (fermentadora_de_lactosa == "no") {
               if (flagelos == "sí") {
-                if (esporas == "no") {
+                if (esporas == "sí") {
                   if (fermentadora_de_glucosa == "sí") {
                     if (catalasa == "sí") {
                       print("La bacteria es Bacillus subtilis")
@@ -113,7 +135,7 @@ identificar_bacteria <- function() {
           }
         }
       }
-    }
+    } 
   } else if (gram == "negativa") {
     if (morfologia == "coco") {
       if (respiracion == "aerobio") {
@@ -125,7 +147,8 @@ identificar_bacteria <- function() {
                   if (fermentadora_de_glucosa == "no") {
                     if (catalasa == "sí") {
                       print("La bacteria es Moraxella catarrhalis")
-                    }
+                    } else if (catalasa == "no"){
+                      print ("La bacteria es Neisseria gonorrhoeae")}
                   }
                 }
               }
@@ -141,15 +164,29 @@ identificar_bacteria <- function() {
               if (flagelos == "sí") {
                 if (esporas == "no") {
                   if (fermentadora_de_glucosa == "sí") {
-                    if (catalasa == "sí") {
-                      print("La bacteria es Vibrio cholerae")
+                    if (catalasa == "sí") { 
+                      if (oxidasa == "sí"){ 
+                        print ("La bacteria es Vibrio cholerae ")}
+                      else if (oxidasa == "no"){
+                        print("La bacteria es Salmonella enterica ")
+                      }
                     }
+                  }
+                }
+              }
+            } else if (fermentadora_de_lactosa == "sí") {
+              if (flagelos == "sí") {
+                if (esporas == "no") {
+                  if (fermentadora_de_glucosa == "sí") {
+                    if (catalasa == "sí") {
+                      print("La bacteria es Escherichia coli") }
                   }
                 }
               }
             }
           }
-        }
+        } else if (motilidad =="no"){ 
+          print("La bacteria es Klebsiella pneumoniae")}
       } else if (respiracion == "aerobio") {
         if (motilidad == "sí") {
           if (patogena == "no") {
@@ -168,12 +205,13 @@ identificar_bacteria <- function() {
         }
       }
     }
-  }
+  } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
+  if (genero == "sí") {
+    print("La bacteria es Mycobacterium tuberculosis:")
+  } else if (genero == "no") { genero2<- (prompt = "La bacteria pertenece al genero Chlamydia (sí/ no):")
+  if (genero1 == sí ){print ("La bacteria es Chlamydia trachomatis")}
+  else {print (print ("La bacteria es Rickettsia ricketsii "))} }}
 }
 
 # Ejecutar la función
 identificar_bacteria()
-###### 
-#hola
-
-##si funciona 
