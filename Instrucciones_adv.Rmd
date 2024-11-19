@@ -58,8 +58,18 @@ data.frame(hongo=c("Aspergillus fumigatus","Penicillium chrysogenum","Aspergillu
 hongos
 ```
 
-
+## Virus
 ```{r,echo=FALSE}
-
+data.frame(virus=c("Herpes","Cytomegalovirus","Coronavirus","Pneumovirus","Lyssavirus (rabia)","Influenza","VIH","Rotavirus","Flavivirus","Viruela símica","Ébola","Arenavirus","Mosaico del tabaco","Bacteriófago T4","Hepatitis B","Adenovirus","VPH","Dengue","Polio","Mosaico de la coliflor","Epstein-Barr"),
+           material_genetico=c("dna","dna","rna","rna","rna","rna","rna","rna","rna","dna","rna","rna","rna","dna","dna","dna","dna","rna","rna","dna","dna"),
+           cadena=c("doble","doble","simple","simple","simple","simple","simple","simple","simple","doble","simple","simple","simple","doble","doble","doble","doble","simple","simple","simple","dna"),
+           envoltura=c("si","si","si","si","si","si","si","no","si","si","si","si","no","no","si","no","no","si","no","no","si"),
+           vectores=c("no","no","no","no","si","no","no","no","si","no","no","si","si","no","no","no","no","si","no","si","no"),
+           huespued=c("humano","humano","humano","humano","animal","humano","humano","animal","humano","animal","humano","humano","planta","bacteria","humano","humano","humano","humano","humano","planta","humano"),
+           retrotranscriptasa=c("no","no","no","no","no","no","si","no","no","no","no","no","no","no","no","no","no","no","no","no","no"),
+           vacuna=c("no","no","si","no","si","si","no","si","no","si","si","si","no","no","si","no","si","si","si","no","no"),
+           transmision=c("sexual","contacto","saliva","saliva","saliva","saliva","sangre","fecal","vector","contacto","sangre","vector","vector","bacteria","sangre","saliva","sexual","vector","fecal","vector","contacto")
+           )->virus
+virus
 ```
 
