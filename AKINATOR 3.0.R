@@ -130,7 +130,7 @@ hongo_adivina(microorganismo)
 ##########################
 ##AKINATOR 4.0
 hongo_adivina <- function(microorganismos){
-  if (micro_inicial == "hongos"){
+  else if (micro_inicial == "hongos"){
   readline(prompt = "Escoge una opción (macroscopico o microscopico): ") -> inicial
   while(tolower(inicial) != "macroscopico" & tolower(inicial) != "microscopico") {
     inicial <- readline(prompt = "Escoge la opción 'macroscopico' o 'microscopico': ")
