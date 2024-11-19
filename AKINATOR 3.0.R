@@ -321,7 +321,7 @@ analisis_AA <- function( ){
   return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
 }
 
-analisis_AA
+analisis_AA()
 
 ADN_analisis<- function( ){
   cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
