@@ -384,8 +384,10 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "no") {
                         print("La bacteria es Streptococcus")
+                          ADN_analisis()
                       } else if (catalasa == "sí") {
                         print("La bacteria es Staphylococcus aureus")
+                          ADN_analisis()
                       }
                     }
                   }
@@ -398,7 +400,9 @@ adivina_microorganismos <- function(microorganismos){
                 if (esporas == "no") {
                   if (fermentadora_de_glucosa == "sí") {
                     if (catalasa == "sí") {
-                      print("La bacteria es Vibrio fisheri")}
+                      print("La bacteria es Vibrio fisheri") 
+                      ADN_analisis()
+                    }
                   }
                 }
               }
@@ -417,8 +421,11 @@ adivina_microorganismos <- function(microorganismos){
                         casei<- readline(prompt = "La bacteria es Lactobacillus casei?") 
                         { if (casei == "sí")
                         {  print("La bacteria es Lactobacillus casei")
+                           ADN_analisis()
                         }  else if ( casei == "no") 
-                        { print( "La bacteria es Lactobacillus acidophilus")}
+                        { print( "La bacteria es Lactobacillus acidophilus")
+                          ADN_analisis()
+                        }
                         }
                       }
                     }
@@ -431,10 +438,12 @@ adivina_microorganismos <- function(microorganismos){
                       if (fermentadora_de_glucosa == "no") {
                         if (catalasa == "no"){ 
                           botulinum<- readline(prompt = "La bacteria es Clostridium botulinum?") 
+                          ADN_analisis()
                           { if (botulinum == "sí")
                           {  print("La bacteria es Clostridium botulinum")
                           }  else if ( botulinum == "no") 
-                          { print( "La bacteria es Clostridium tetani")}
+                          { print( "La bacteria es Clostridium tetani") 
+                            ADN_analisis()}
                           }
                         } 
                       }
@@ -443,7 +452,8 @@ adivina_microorganismos <- function(microorganismos){
                     if (esporas == "no") {
                       if (fermentadora_de_glucosa == "sí") {
                         if (catalasa == "sí") {
-                          print("La bacteria es Listeria monocytogenes")
+                          print("La bacteria es Listeria monocytogenes") 
+                            ADN_analisis()
                         }
                       }
                     }
@@ -461,6 +471,7 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "sí") {
                         print("La bacteria es Bacillus anthracis")
+                          ADN_analisis()
                       }
                     }
                   }
@@ -473,6 +484,7 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "sí") {
                         print("La bacteria es Bacillus thuringiensis")
+                          ADN_analisis()
                       }
                     }
                   }
@@ -487,6 +499,7 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "sí") {
                         print("La bacteria es Bacillus subtilis")
+                          ADN_analisis()
                       }
                     }
                   }
@@ -507,8 +520,11 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "no") {
                       if (catalasa == "sí") {
                         print("La bacteria es Moraxella catarrhalis")
+                          ADN_analisis()
                       } else if (catalasa == "no"){
-                        print ("La bacteria es Neisseria gonorrhoeae")}
+                        print ("La bacteria es Neisseria gonorrhoeae")
+                        ADN_analisis()
+                      }
                     }
                   }
                 }
@@ -526,9 +542,12 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "sí") { 
                         if (oxidasa == "sí"){ 
-                          print ("La bacteria es Vibrio cholerae ")}
+                          print ("La bacteria es Vibrio cholerae ")
+                          ADN_analisis()
+                        }
                         else if (oxidasa == "no"){
                           print("La bacteria es Salmonella enterica ")
+                            ADN_analisis()
                         }
                       }
                     }
@@ -539,14 +558,18 @@ adivina_microorganismos <- function(microorganismos){
                   if (esporas == "no") {
                     if (fermentadora_de_glucosa == "sí") {
                       if (catalasa == "sí") {
-                        print("La bacteria es Escherichia coli") }
+                        print("La bacteria es Escherichia coli")
+                        ADN_analisis()
+                      }
                     }
                   }
                 }
               }
             }
           } else if (motilidad =="no"){ 
-            print("La bacteria es Klebsiella pneumoniae")}
+            print("La bacteria es Klebsiella pneumoniae")
+            ADN_analisis()
+          }
         } else if (respiracion == "aerobio") {
           if (motilidad == "sí") {
             if (patogena == "no") {
@@ -556,6 +579,7 @@ adivina_microorganismos <- function(microorganismos){
                     if (fermentadora_de_glucosa == "no") {
                       if (catalasa == "sí") {
                         print("La bacteria es Azotobacter chroococcum")
+                          ADN_analisis()
                       }
                     }
                   }
@@ -567,10 +591,16 @@ adivina_microorganismos <- function(microorganismos){
       }
     } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
     if (genero == "sí") {
-      print("La bacteria es Mycobacterium tuberculosis:")
+      print("La bacteria es Mycobacterium tuberculosis:") 
+        ADN_analisis()
     } else if (genero == "no") { genero2<- (prompt = "La bacteria pertenece al genero Chlamydia (sí/ no):")
-    if (genero1 == sí ){print ("La bacteria es Chlamydia trachomatis")}
-    else {print (print ("La bacteria es Rickettsia ricketsii "))} }}
+    if (genero1 == "sí" ){print ("La bacteria es Chlamydia trachomatis")
+                           ADN_analisis() 
+                         }
+    else {print  ("La bacteria es Rickettsia ricketsii ")
+          ADN_analisis()
+         } 
+                               }}
   }
   
   # Ejecutar la función
