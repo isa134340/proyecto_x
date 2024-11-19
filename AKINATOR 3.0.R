@@ -1,9 +1,8 @@
 ##AKINATOR 3.0
 
-hongo_adivina <- function(microorganismos){
-  cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
-  readline(prompt = "escoge una opccion (macroscopico o microscopico) ") -> inicial
-  while(tolower(inicial) != "macroscopico" & tolower(inicial) != "microscopico") {
+#hongo_adivina <- function(microorganismos){
+ # cat("¡Bienvenido a 'Adivina quién' de microorganismos!\n")
+  ##hile(tolower(inicial) != "macroscopico" & tolower(inicial) != "microscopico") {
     inicial <- readline(prompt = "Escoge la opción 'macroscopico' o 'microscopico': ")
   }
   ####EMPEZAMOS CON MACROSCOPICO
@@ -31,6 +30,7 @@ hongo_adivina <- function(microorganismos){
           }
           if (genero_1 == "si") {
             print("Tu hongo es Lycoperdon pertulatum")
+            analisis_AA()
           } else if (genero_1 == "no") {
             genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
             while (tolower(genero_2) != "si" & tolower(genero_2) != "no") {
@@ -123,14 +123,14 @@ hongo_adivina <- function(microorganismos){
     }
   }
   }
-}
+#}
 
 ######################################
 hongo_adivina(microorganismo)
 ##########################
 ##AKINATOR 4.0
 hongo_adivina <- function(microorganismos){
-  else if (micro_inicial == "hongos"){
+  
   readline(prompt = "Escoge una opción (macroscopico o microscopico): ") -> inicial
   while(tolower(inicial) != "macroscopico" & tolower(inicial) != "microscopico") {
     inicial <- readline(prompt = "Escoge la opción 'macroscopico' o 'microscopico': ")
@@ -164,6 +164,7 @@ hongo_adivina <- function(microorganismos){
           }
           if (genero_1 == "si") {
             print("Tu hongo es Lycoperdon pertulatum")
+            analisis_AA_2()
           } else {
             genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
             while (tolower(genero_2) != "si" & tolower(genero_2) != "no") {
@@ -283,7 +284,7 @@ hongo_adivina <- function(microorganismos){
     }
   }
   }
-}
+
 
 hongo_adivina(microorganismo)
 ######
@@ -313,15 +314,15 @@ library(BiocGenerics)
 library()
 
 
-analisis_AA <- function( ){
-  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
-  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
-  secuencia <- readAAStringSet(file.choose())
-  tamaño_aa<- width(secuencia)
-  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
-}
+#analisis_AA <- function( ){
+ # cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  #cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  #secuencia <- readAAStringSet(file.choose())
+  #tamaño_aa<- width(secuencia)
+  #return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
+#}
 
-analisis_AA()
+#analisis_AA()
 
 ADN_analisis<- function( ){
   cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
@@ -350,3 +351,24 @@ ARN_analisis<- function( ){
 }
 
 RNA_analisis( )
+
+
+# Cargar Biostrings
+library(Biostrings)
+
+# Función de análisis de secuencia
+analisis_AA_2 <- function() {
+  cat("¡Ahora podrás conocer datos sobre la secuencia de tu microorganismo!\n")
+  cat("Recuerda el nombre de tu microorganismo, lo necesitarás para esta parte!\n")
+  
+  secuencia <- readAAStringSet(file.choose())  
+  tamaño_aa <- width(secuencia)  # Calcula el tamaño de la secuencia de aminoácidos
+  
+  # Mostrar el resultado
+  cat("La secuencia tiene un tamaño de: ", tamaño_aa, " aminoácidos\n")
+  cat("La secuencia es:\n")
+  print(secuencia)
+  
+  # Devolver la secuencia y su tamaño
+  return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
+}

@@ -44,6 +44,7 @@ adivina_microorganismos <- function(microorganismos){
             }
             if (genero_1 == "si") {
               print("Tu hongo es Lycoperdon pertulatum")
+              analisis_AA()
             } else {
               genero_2 <- readline(prompt = "¿Tu hongo es del genero lentinula? (si/no): ")
               while (tolower(genero_2) != "si" & tolower(genero_2) != "no") {
