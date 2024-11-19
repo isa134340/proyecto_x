@@ -288,6 +288,9 @@ adivina_microorganismos <- function(microorganismos){
   } else if (micro_inicial == "bacterias" ) {identificar_bacteria <- function() {
     # Preguntas iniciales
     gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
+    while(tolower(gram) != "positiva" & tolower(gram) != "negativa" & tolower(gram) != "NA") { #corchete del while
+      gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")  
+    } #corchete del while 
     morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
     respiracion <- readline(prompt = "¿La bacteria es aerobia o anaerobia? (aerobio/anaerobio): ")
     motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
