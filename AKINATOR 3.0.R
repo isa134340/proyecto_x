@@ -302,12 +302,15 @@ reinicio_juego <- function() {
 
 
 ###########################################
-
 lycoperdon_secuencia <- readAAStringSet("SECUENCIAS/lycoperlum.fasta")
 print(lycoperdon_secuencia)
 
 secuencia <- readAAStringSet(file.choose())
 class(secuencia)
+##########################################
+library(Biostrings)
+library(BiocGenerics)
+
 
 hongo_secuencia <- function( ){
   secuencia <- readAAStringSet(file.choose())
