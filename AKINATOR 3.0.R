@@ -212,6 +212,7 @@ hongo_adivina <- function(microorganismos){
         
         if (gen_4 == "si") {
           print("El hongo es Russula emetica")
+          ADN_analisis()
         } else {
           print("Los hongos son Amanita phalloides y Amanita gemmata")
         }
@@ -327,30 +328,44 @@ library()
 ADN_analisis<- function( ){
   cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
   cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  
   secuencia_ADN <- readDNAStringSet( file.choose())
+  
   tamaño <- width(secuencia_ADN) 
   reverso<- rev(secuencia_ADN) 
   reverso_complementario <- reverseComplement(secuencia_ADN)
   alfabeto<- alphabetFrequency(secuencia_ADN)
   traducida<- translate(secuencia_ADN)
-  return(list(tamaño = tamaño, reverso = reverso, reverso_complementario = reverso_complementario, alfabeto = alfabeto, traducida=traducida))
+  
+  cat("El tamaño de la secuencia es: ", tamaño, " nucleótidos\n")
+  cat("Frecuencia de los nucleótidos: \n")
+  print(alfabeto)
+  cat("Secuencia traducida es: \n")
+  print(traducida)
+  
+  
+  return(list(tamaño = tamaño, 
+              reverso = reverso, 
+              reverso_complementario = reverso_complementario, 
+              alfabeto = alfabeto, 
+              traducida=traducida))
 }
 
 ADN_analisis()
 
-ARN_analisis<- function( ){
-  cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
-  cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
-  secuencia_ARN <- readRNAStringSet( file.choose())
-  tamaño <- width(secuencia_ARN) 
-  reverso<- rev(secuencia_ARN) 
-  reverso_complementario <- reverseComplement(secuencia_ARN)
-  alfabeto<- alphabetFrequency(secuencia_ARN)
-  traducida<- translate(secuencia_ARN)
-  return(list(tamaño = tamaño, reverso = reverso, reverso_complementario = reverso_complementario, alfabeto = alfabeto, traducida=traducida))
-}
+#ARN_analisis<- function( ){
+ # cat("¡Ahora podras conocer datos sobre la secuencia de tu microorganismo!\n")
+  #cat("Recuerda el nombre de tu microorganismo, lo necesitaras para esta parte !\n")
+  #secuencia_ARN <- readRNAStringSet( file.choose())
+  #tamaño <- width(secuencia_ARN) 
+  #reverso<- rev(secuencia_ARN) 
+  #reverso_complementario <- reverseComplement(secuencia_ARN)
+  #alfabeto<- alphabetFrequency(secuencia_ARN)
+  #traducida<- translate(secuencia_ARN)
+  #return(list(tamaño = tamaño, reverso = reverso, reverso_complementario = reverso_complementario, alfabeto = alfabeto, traducida=traducida))
+#}
 
-RNA_analisis( )
+#RNA_analisis( )
 
 
 # Cargar Biostrings
