@@ -645,10 +645,10 @@ adivina_microorganismos <- function(microorganismos){
     ADN_analisis()
   } 
   }
-}
+  }
+  identificar_bacteria( )
 }
   reinicio_juego()
-
 }  
 
 adivina_microorganismos(microorganismos)
