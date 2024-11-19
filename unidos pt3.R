@@ -590,7 +590,7 @@ reinicio_juego <- function() {
     readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta  
   }
   if (respuesta == "si") {
-    hongo_adivina(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
+    adivina_microorganismos(microorganismos) #Que active la funcion de nuevo----este seria el nombre de la funcion general
   } else {
     cat("¡Gracias por jugar! Adiós.\n")
   }
