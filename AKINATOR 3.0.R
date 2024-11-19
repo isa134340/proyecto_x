@@ -297,3 +297,7 @@ reinicio_juego <- function() {
     cat("¡Gracias por jugar! Adiós.\n")
   }
 }
+
+
+###########################################
+
