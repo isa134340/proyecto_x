@@ -7,7 +7,7 @@ hongo_adivina <- function(microorganismos){
     inicial <- readline(prompt = "Escoge la opción 'macroscopico' o 'microscopico': ")
   }
   ####EMPEZAMOS CON MACROSCOPICO
-  if (inicial == "macroscopico") {
+  #if (inicial == "macroscopico") {
     # Segunda pregunta: ¿PRODUCE ANTIBIOTICO?
     antibiotico <- readline(prompt = "¿El hongo produce antibiotico (si/no): ")
     while(antibiotico != "si" & antibiotico != "no"){
