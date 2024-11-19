@@ -302,6 +302,7 @@ reinicio_juego <- function() {
 
 
 ###########################################
+
 lycoperdon_secuencia <- readAAStringSet("SECUENCIAS/lycoperlum.fasta")
 print(lycoperdon_secuencia)
 

@@ -60,13 +60,37 @@ adivina(x)#ahí me sale el error que les decía que se crea un archivo por cada 
 los_virus<-function(){
   #para identificar que onda
   gen<-readline(prompt="que material genético tiene: \n dna/rna ")
+  while(tolower(gen)!="dna"|tolower(gen)!="rna"){
+    gen<-readline(prompt="que material genético tiene: \n dna/rna ")
+  }
   cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
+  while(tolower(cadena)!="doble"|tolower(cadena)!="sencilla"){
+    cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
+  }
   envoltura<-readline(prompt="tiene envoltura: \n si/no ")
+  while(tolower(envoltura)!="si"|tolower(envoltura)!="no"){
+    envoltura<-readline(prompt="tiene envoltura: \n si/no ")
+  }
   vectores<-readline(prompt="necesita de vectores: \n si/no ")
+  while(tolower(vectores)!="si"|tolower(vectores)!="no"){
+    vectores<-readline(prompt="necesita de vectores: \n si/no ")
+  }
   huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
-  enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")#si dice que si ya obvio es VIH
-  vacuna<-readline(prompt="la infección causada por tu virus tiene vacuna disponible?: \n si/no ")
+  while(tolower(huesped)!="humano"|tolower(huesped)!="animal"|tolower(huesped)!="planta"|tolower(huesped)!="bacteria"){
+    huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
+  }
+  enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")
+  while(tolower(enzima)!="si"|tolower(enzima)!="no"){
+    enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")
+  }
+  vacuna<-readline(prompt="cuenta con vacuna disponible?: \n si/no ")
+  while(tolower(vacuna)!="si"|tolower(vacuna)!="no"){
+    vacuna<-readline(prompt="cuenta con vacuna disponible?: \n si/no ")
+  }
   trans<-readline(prompt="cuál es su forma principal de transmisión:\n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
+  while(tolower(trans)!="sexual"|tolower(trans)!="contacto"|tolower!="saliva"|tolower!="sangre"|tolower!="fecal"|tolower!="vector"|tolower!="bacteria"){
+    trans<-readline(prompt="cual es su forma principal de transmisión: \n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
+  }
   #no se como plantear la pregunta del género :/
   
   if(gen=="dna"){
@@ -82,8 +106,8 @@ los_virus<-function(){
             }
           }
         }
-      }
-    }
+      }else{print("No hay un virus que coincida con tus características")}
+    }else{print("No hay un virus que coincida con tus características")}
       }else{
         if(envoltura=="no"){
         if(vectores=="no"){
@@ -107,7 +131,7 @@ los_virus<-function(){
                 }
               }
             }
-          }
+          }else if(huesped=="planta"|huesped=="animal"){print("No hay un virus que coincida con tus características")}
         }
         }else{
         if(vectores=="no"){
@@ -354,3 +378,128 @@ los_virus<-function(){
 }
 los_virus()
 nuestrosvirusitos
+
+
+gen<-readline(prompt="que material genético tiene: \n dna/rna ")
+cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
+envoltura<-readline(prompt="tiene envoltura: \n si/no ")
+vectores<-readline(prompt="necesita de vectores: \n si/no ")
+huesped<-readline(prompt="principalmente que afecta: \n humano/animal/planta/bacteria ")
+enzima<-readline(prompt="usa retrotranscriptasa: \n si/no ")#si dice que si ya obvio es VIH
+vacuna<-readline(prompt="la infección causada por tu virus tiene vacuna disponible?: \n si/no ")
+trans<-readline(prompt="cuál es su forma principal de transmisión:\n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
+#no se como plantear la pregunta del género :/
+
+if(gen=="dna"){
+  if(cadena=="sencilla"){
+    if(envoltura=="no"){
+      if(vectores=="si"){
+        if(huesped=="planta"){
+          if(enzima=="no"){
+            if(vacuna=="no"){
+              if(trans=="vector"){
+                print("tu virus es el virus del mosaico de la coliflor no es así?")
+              }
+            }
+          }
+        }
+      }
+    }
+  }else{
+    if(envoltura=="no"){
+      if(vectores=="no"){
+        if(huesped=="humano"){
+          if(enzima=="no"){
+            if(vacuna=="no"){
+              if(trans=="saliva"){
+                print("tu virus es un adenovirus")
+              }
+            }else{
+              if(trans=="sexual"){
+                print("tu virus es el del VPH")
+              }
+            }
+          }
+        }else if(huesped=="bacteria"){
+          if(vacuna=="no"){
+            if(enzima=="no"){
+              if(trans=="bacteria"){
+                print("pensaste en un bacteriofago T4")
+              }
+            }
+          }
+        }
+      }
+    }else{
+      if(vectores=="no"){
+        if(huesped=="animal"){
+          print("tu virus es la viruela símica")
+        }else if(huesped=="humano"){
+          if(enzima=="no"){
+            if(vacuna=="si"){
+              print("pensaste en el virus de la hepatitis B")
+            } else {
+              if(trans=="sexual"){
+                print("pensaste en el virus del herpes")
+              } else if(trans=="contacto"){
+                viru1<-readline(prompt="pensaste en el cytomegalovirus?: si/no ")
+                if(viru1=="si"){
+                  print("el virus en el que pensaste es cytomegalovirus")
+                }else{
+                  print("el virus en el que pensaste es el de epstein-barr")
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} else if(gen=="rna"){
+  if(cadena=="doble"){
+    print("tu virus es el rotavirus")
+  }else {
+    if(envoltura=="no"){
+      if(vectores=="si"){
+        print("tienes el virus del mosaico del tabaco")
+      } else{ 
+        print("tienes el virus de la polio")}
+    }else{
+      if(vectores=="si"){
+        if(huesped=="animal"){
+          print("tu virus es el de la rabia, o sea lyssavirus")
+        }else if(huesped=="humano"){
+          if(enzima=="no"){
+            if(vacuna=="si"){
+              print("pensaste en arenavirus")
+            }else{
+              print("pensaste en el flavivirus")
+            }
+          }
+        }
+      }else{
+        if(huesped=="humano"){
+          if(enzima=="si"){
+            print("pensaste en el VIH, o sea lentivirus")
+          }else{
+            if(vacuna=="no"){
+              print("tienes el pneumovirus")
+            } else{
+              if(trans=="sangre"){
+                print("pensaste en el ébola")
+              }else if(trans=="saliva"){
+                viru2<-readline(prompt="tu virus pertenece al género influenzavirus?: si/no ")
+                if(viru2=="no"){
+                  print("entonces pensaste en el coronavirus, no tuviste con la pandemia para dejar de pensar en el verdad?")
+                } else{
+                  print("tu virus es el influenzavirus")
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
