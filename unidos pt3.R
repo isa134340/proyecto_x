@@ -181,7 +181,7 @@ adivina_microorganismos <- function(microorganismos){
     }
   } else if(micro_inicial=="virus"){
     gen<-readline(prompt="que material genético tiene: \n dna/rna ")
-    while(tolower(gen)!="dna" & tolower(gen)!="rna"){
+    while(tolower(gen)!= "dna" & tolower(gen)!= "rna"){
       gen<-readline(prompt="que material genético tiene: \n dna/rna ")
     }
     cadena<-readline(prompt="cuantas cadenas tiene: \n doble/sencilla ")
@@ -209,10 +209,10 @@ adivina_microorganismos <- function(microorganismos){
       vacuna<-readline(prompt="cuenta con vacuna disponible?: \n si/no ")
     }
     trans<-readline(prompt="cuál es su forma principal de transmisión:\n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
-    while(tolower(trans)!="sexual" & tolower(trans)!="contacto" & tolower!="saliva" & tolower!="sangre" & tolower!="fecal" & tolower!="vector" & tolower!="bacteria"){
+    while(tolower(trans)!="sexual" & tolower(trans)!="contacto" & tolower(trans)!="saliva" & tolower(trans)!="sangre" & tolower(trans)!="fecal" & tolower(trans)!="vector" & tolower(trans)!="bacteria"){
       trans<-readline(prompt="cual es su forma principal de transmisión: \n sexual/contacto/saliva/sangre/fecal/vector/bacteria ")
     }
-    
+    #VIRUS DNA
     if(gen=="dna"){
       if(cadena=="sencilla"){
         if(envoltura=="no"){
@@ -226,9 +226,9 @@ adivina_microorganismos <- function(microorganismos){
                 }
               }
             }
-          }
+          }else{print("No hay virus que coincida con tu descripción ")}
         }
-      }else{
+      }else{#esto es cadena doble
         if(envoltura=="no"){
           if(vectores=="no"){
             if(huesped=="humano"){
@@ -251,9 +251,9 @@ adivina_microorganismos <- function(microorganismos){
                   }
                 }
               }
-            }
+            }else{print("No hay virus que coincida con tu descripción")}
           }
-        }else{
+        }else{#esto es que SI tiene envoltura 
           if(vectores=="no"){
             if(huesped=="animal"){
               print("tu virus es la viruela símica")
@@ -274,39 +274,79 @@ adivina_microorganismos <- function(microorganismos){
                   }
                 }
               }
-            }
-          }
+            }else if(huesped=="animal"){
+              if(enzima=="no"){
+                if(vacuna=="si"){
+                  if(trans=="contacto"){
+                    print("tienes el virus de la viruela símica")
+                  }
+                }
+              }
+            }else{print("No hay virus que coincida con tu descripción")}
+          }else{print("No hay virus que coincida con tu descripción")}
         }
       }
-    } else if(gen=="rna"){
+    } else if(gen=="rna"){###VIRUS RNA
       if(cadena=="doble"){
-        print("tu virus es el rotavirus")
+        if(envoltura=="no"){
+          if(vectores=="no"){
+            if(huesped=="animal"){
+              if(enzima=="no"){
+                if(vectores=="si"){
+                  if(trans=="fecal"){print("tienes el rotavirus")}
+                }
+              }
+            }else if(huesped=="bacteria"|huesped=="planta"|huesped=="humano"){print("No hay virus que coincida con tu descripción ")}
+          }
+        }
       }else {
         if(envoltura=="no"){
           if(vectores=="si"){
-            print("tienes el virus del mosaico del tabaco")
+            if(huesped=="planta"){
+              if(enzima=="no"){
+                if(vacuna=="no"){
+                  if(trans=="vector"){print("tienes el virus del mosaico del tabaco")}
+                }else{print("No hay virus que coincida con tu descripción")}
+              }
+            }
           } else{ 
-            print("tienes el virus de la polio")}
-        }else{
+            if(huesped=="humano"){
+              if(enzima=="no"){
+                if(vacuna=="si"){
+                  if(trans=="fecal"){print("tienes el virus de la polio")}
+                }else{print("No hay virus que coincida con tu descripción")}
+              }else{print("No hay virus que coincida con tu descripción")}
+            }
+          }
+        }else{#esto quiere decir que si tiene envoltura RNA SENCILLA CON ENV
           if(vectores=="si"){
             if(huesped=="animal"){
-              print("tu virus es el de la rabia, o sea lyssavirus")
+              if(enzima=="no"){
+                if(vacuna=="si"){
+                  if(trans=="saliva"){
+                    print("tu virus es el de la rabia, o sea lyssavirus")}
+                }
+              }
             }else if(huesped=="humano"){
               if(enzima=="no"){
                 if(vacuna=="si"){
-                  print("pensaste en arenavirus")
+                  if(trans=="vector"){
+                    viru3<-readline(prompt="tu virus pertenece al género de Arenavirus? :si/no ")
+                    if(viru3=="si"){print("pensaste en arenavirus")}else{"pensaste en el virus del dengue"}}else{print("No hay virus que coincida con tu descripción")}
                 }else{
                   print("pensaste en el flavivirus")
                 }
               }
-            }
+            }else if(huesped=="planta"|huesped=="bacteria"){print("No hay virus que coincida con tu descripción")}
           }else{
             if(huesped=="humano"){
               if(enzima=="si"){
-                print("pensaste en el VIH, o sea lentivirus")
+                if(vacuna=="no"){
+                  if(trans=="sangre"){print("tienes el VIH")}
+                }else{print("No hay virus que coincida con tu descripción")}
               }else{
                 if(vacuna=="no"){
-                  print("tienes el pneumovirus")
+                  if(trans=="saliva"){print("tienes el pneumovirus")}else{print("No hay virus que coincida con tu descripción")}
                 } else{
                   if(trans=="sangre"){
                     print("pensaste en el ébola")
