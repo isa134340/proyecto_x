@@ -96,7 +96,7 @@ adivina_microorganismos <- function(microorganismos){
           }
         }
       } else {  # antibiotico == "si"
-        print("No hay ningún hongo que coincida con tu búsqueda, intenta de nuevo")
+        print("No hay ningún hongo que coincida con tu búsqueda, intentalo de nuevo")
       }
     }
     #### EMPEZAMOS CON MICROSCÓPICO
