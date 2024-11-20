@@ -404,35 +404,35 @@ adivina_microorganismos <- function(microorganismos){
     respiracion <- readline(prompt = "¿La bacteria es aerobia o anaerobia? (aerobio/anaerobio): ")
   } #corchete while
   motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
-  while (tolower (motilidad) != "si" & tolower (motilidad) !="sí" & tolower (motilidad) != "no"){
+  while (tolower (motilidad) !="sí" & tolower (motilidad) != "no"){
     motilidad <- readline(prompt = "¿La bacteria es móvil? (sí/no): ")
   } #corchete while
   patogena <- readline(prompt = "¿La bacteria es patógena? (sí/no): ")
-  while (tolower (patogena) != "si" & tolower (patogena) !="sí" & tolower (patogena) != "no"){
+  while (tolower (patogena) !="sí" & tolower (patogena) != "no"){
     patogena <- readline(prompt = "¿La bacteria es patógena? (sí/no): ")
   }
   fermentadora_de_lactosa <- readline(prompt = "¿La bacteria fermenta la lactosa? (sí/no): ")
-  while (tolower (fermentadora_de_lactosa) != "si" & tolower (fermentadora_de_lactosa) !="sí" & tolower (fermentadora_de_lactosa) != "no"){
+  while (tolower (fermentadora_de_lactosa) !="sí" & tolower (fermentadora_de_lactosa) != "no"){
     fermentadora_de_lactosa <- readline(prompt = "¿La bacteria fermenta la lactosa? (sí/no): ")
   }
   flagelos <- readline(prompt = "¿La bacteria tiene flagelos? (sí/no): ")
-  while (tolower (flagelos) != "si" & tolower (flagelos) !="sí" & tolower (flagelos) != "no"){
+  while (tolower (flagelos) !="sí" & tolower (flagelos) != "no"){
     flagelos <- readline(prompt = "¿La bacteria tiene flagelos? (sí/no): ")
   }
   esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
-  while (tolower (esporas) != "si" & tolower (esporas) !="sí" & tolower (esporas) != "no") {
+  while (tolower (esporas) !="sí" & tolower (esporas) != "no") {
     esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
   }
   fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
-  while (tolower (fermentadora_de_glucosa) != "si" & tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
+  while ("si" & tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
     fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
   }
   catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
-  while (tolower (catalasa) != "si" & tolower (catalasa) !="sí" & tolower (catalasa) != "no"){
+  while (tolower (catalasa) !="sí" & tolower (catalasa) != "no"){
     catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
   }
   oxidasa <- readline (prompt= "La bacteria es oxidasa positiva? (sí/no)")
-  while (tolower (oxidasa) != "si" & tolower (oxidasa) !="sí" & tolower (oxidasa) != "no") {
+  while (tolower (oxidasa) !="sí" & tolower (oxidasa) != "no") {
     oxidasa <- readline (prompt= "La bacteria es oxidasa positiva? (sí/no)")
   }
   
@@ -481,6 +481,18 @@ adivina_microorganismos <- function(microorganismos){
                   }
                 }
               }
+            } else if (fermentadora_de_lactosa == "no") {
+              if (flagelos == "no") {
+                if (esporas == "no") {
+                  if (fermentadora_de_glucosa == "sí") {
+                    if (catalasa == "no") {
+                      print("La bacteria es Bifidobacterium")
+                      ADN_analisis()
+                    }
+                  }
+                }
+              }
+            }
             } else if (patogena == "sí") {
               if (fermentadora_de_lactosa == "no") {
                 if (flagelos == "no") {
@@ -498,19 +510,24 @@ adivina_microorganismos <- function(microorganismos){
                       }
                     }
                   }
-                } else if (flagelos == "sí") {
-                  if (esporas == "no") {
-                    if (fermentadora_de_glucosa == "sí") {
-                      if (catalasa == "sí") {
-                        print("La bacteria es Listeria monocytogenes")
-                        ADN_analisis()
-                      }
-                    }
-                  }
+                } 
+              }
+            }
+        } else if (motilidad == "sí") {
+          if (patogena == "sí") {
+            if (fermentadora_de_lactosa == "no") {
+              if (flagelos == "sí") {
+                if (esporas == "no") {
+                  if (fermentadora_de_glucosa == "sí") {
+                    if (catalasa == "sí") {
+                      print("La bacteria es Listeria monocytogenes")
+                      ADN_analisis()
+          }
+        }
+      } 
                 }
               }
             }
-          }
         }
       } else if (respiracion == "aerobio") {
         if (motilidad == "no") {
@@ -558,8 +575,9 @@ adivina_microorganismos <- function(microorganismos){
           }
         }
       }
-    }
-  } else if (gram == "negativa") {
+    
+      }
+    }else if (gram == "negativa"){
     if (morfologia == "coco") {
       if (respiracion == "aerobio") {
         if (motilidad == "no") {
@@ -615,12 +633,25 @@ adivina_microorganismos <- function(microorganismos){
                 }
               }
             }
+          } else if (patogena== "no") {
+              if (fermentadora_de_lactosa == "no") {
+                if (flagelos == "sí") {
+                  if (esporas == "no") {
+                    if (fermentadora_de_glucosa == "sí") {
+                      if (catalasa == "sí") {
+                        print("La bacteria es Vibrio fisheri") 
+                        ADN_analisis()
+                      }
+                    }
+                  }
+                }
+              }
           }
-        } else if (motilidad =="no"){ 
+        }else if (motilidad =="no"){ 
           print("La bacteria es Klebsiella pneumoniae")
           ADN_analisis()
-          }
-      } else if (respiracion == "aerobio") {
+        }
+        }else if (respiracion == "aerobio") {
         if (motilidad == "sí") {
           if (patogena == "no") {
             if (fermentadora_de_lactosa == "no") {
@@ -639,14 +670,15 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }
-  } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
-  if (genero == "sí") {
-    print("La bacteria es Mycobacterium tuberculosis:")
-    ADN_analisis()
-  } 
-  }
-  }
-  identificar_bacteria( )
+    } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
+    if (genero == "sí") {
+      print("La bacteria es Mycobacterium tuberculosis:") 
+      ADN_analisis()
+    } 
+    }
+}
+
+identificar_bacteria()
 }
   reinicio_juego()
 }  
