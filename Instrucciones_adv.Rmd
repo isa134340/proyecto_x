@@ -2,11 +2,14 @@
 title: "Instrucciones de juego"
 author: "Alondra Domínguez
 
+
   Isabel Herrera
+  
   
   David Flores"
 date: "Bioinformática"
 output: html_document
+theme: "cerulean"
 ---
 
 # **Bienvenido al juego de Adivina Quien! **
