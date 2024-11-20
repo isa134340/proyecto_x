@@ -389,7 +389,7 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }#aquí acaba todo lo de los virus
-  } else if (micro_inicial == "bacterias" ) {identificar_bacteria <- function() {
+  } else if (micro_inicial == "bacterias" ) {
   # Preguntas iniciales
   gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
   while(tolower(gram) != "positiva" & tolower(gram) != "negativa" & tolower(gram) != "NA") { #corchete del while
@@ -678,8 +678,6 @@ adivina_microorganismos <- function(microorganismos){
     }
 }
 
-identificar_bacteria()
-}
   reinicio_juego()
 }  
 
