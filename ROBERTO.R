@@ -485,4 +485,4 @@ library(prettydoc)
 dir.create("~/proyecto_x/nueva_Carpeta")
 #hola
 
-file.create("~/proyecto_x/holita/archivo.txt")
+file.create("~/proyecto_x/nueva_Carpeta/archivo.txt")
