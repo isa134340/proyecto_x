@@ -28,18 +28,18 @@ Realizamos 3 bases para distintos tipos de microorganismos: bacterias, hongos y 
 
 ## __Bacterias__
 ```{r,echo=FALSE}
-data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aureus","Moraxella catarrhalis","Vibrio cholerae","Bacillus anthracis","Salmonella enterica","Escherichia coli","Clostridium botulinum","Listeria monocytogenes","Bacillus thuringiensis","Vibrio fischeri","Mycobacterium tuberculosis","Azotobacter chroococcum","Clostridium tetani","Bifidobacterium","Neisseria gonorrhoeae","Klebsiella pneunmoniae","Lactobacillus acidophilus","Bacillus subtilis"),
-  gram=c("positiva","positiva","positiva","negativa","negativa","positiva","negativa","negativa","positiva","positiva","positiva","negativa","NA","negativa","positiva","positiva","negativa","negativa","positiva","positiva"),
-  morfologia=c("coco","bacilo","coco","coco","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","coco","bacilo","bacilo","bacilo"),
-  respiracion=c("anaerobio","anaerobio","anaerobio","aerobio","anaerobio","aerobio","anaerobio","anaerobio","anaerobio","anaerobio","aerobio","anaerobio","aerobio","aerobio","anaerobio","anaerobio","aerobio","anaerobio","anaerobio","aerobio"),
-  motilidad=c("no","no","no","no","si","no","si","si","no","si","no","si","no","si","no","no","no","no","no","si"),
-  patogena=c("si","no","si","si","si","si","si","si","si","si","no","no","si","no","si","no","si","si","no","no"),
-  fermenta_lactosa=c("no","si","no","no","no","no","no","si","no","no","no","no","no","no","no","no","no","si","si","no"),
-  flagelo=c("no","no","no","no","si","si","si","si","no","si","si","si","no","si","no","no","no","no","no","si"),
-  esporas=c("no","no","no","no","no","si","no","no","si","no","si","no","no","no","si","no","no","no","no","si"),
-  fermenta_glucosa=c("si","si","si","no","si","si","si","si","no","si","si","si","no","no","no","si","no","si","si","si"),
-  catalasa=c("no","no","si","si","si","si","si","si","no","si","si","si","no","si","no","no","no","si","no","si"),
-  oxidasa=c("no","no","no","si","si","si","no","no","no","si","si","si","si","si","no","no","si","no","no","si")
+data.frame(bacteria=c("Streptococcus","Lactobacillus casei","Staphylococcus aureus","Moraxella catarrhalis","Vibrio cholerae","Bacillus anthracis","Salmonella enterica","Escherichia coli","Clostridium botulinum","Listeria monocytogenes","Bacillus thuringiensis","Vibrio fischeri","Azotobacter chroococcum","Clostridium tetani","Bifidobacterium","Neisseria gonorrhoeae","Klebsiella pneunmoniae","Lactobacillus acidophilus","Bacillus subtilis"),
+  gram=c("positiva","positiva","positiva","negativa","negativa","positiva","negativa","negativa","positiva","positiva","positiva","negativa","negativa","positiva","positiva","negativa","negativa","positiva","positiva"),
+  morfologia=c("coco","bacilo","coco","coco","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","bacilo","coco","bacilo","bacilo","bacilo"),
+  respiracion=c("anaerobio","anaerobio","anaerobio","aerobio","anaerobio","aerobio","anaerobio","anaerobio","anaerobio","anaerobio","aerobio","anaerobio","aerobio","anaerobio","anaerobio","aerobio","anaerobio","anaerobio","aerobio"),
+  motilidad=c("no","no","no","no","si","no","si","si","no","si","no","si","si","no","no","no","no","no","si"),
+  patogena=c("si","no","si","si","si","si","si","si","si","si","no","no","no","si","no","si","si","no","no"),
+  fermenta_lactosa=c("no","si","no","no","no","no","no","si","no","no","no","no","no","no","no","no","si","si","no"),
+  flagelo=c("no","no","no","no","si","si","si","si","no","si","si","si","si","no","no","no","no","no","si"),
+  esporas=c("no","no","no","no","no","si","no","no","si","no","si","no","no","si","no","no","no","no","si"),
+  fermenta_glucosa=c("si","si","si","no","si","si","si","si","no","si","si","si","no","no","si","no","si","si","si"),
+  catalasa=c("no","no","si","si","si","si","si","si","no","si","si","si","si","no","no","no","si","no","si"),
+  oxidasa=c("no","no","no","si","si","si","no","no","no","si","si","si","si","no","no","si","no","no","si")
 )->bacterias
 bacterias
 ```
