@@ -1,12 +1,17 @@
 ---
-title: "Instrucciones de juego"
+title: "Instrucciones de juego `Adivina Quien` "
 author: "Alondra Domínguez
+
 
   Isabel Herrera
   
+  
   David Flores"
 date: "Bioinformática"
-output: html_document
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+
 ---
 
 # **Bienvenido al juego de Adivina Quien! **

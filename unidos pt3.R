@@ -296,7 +296,7 @@ adivina_microorganismos <- function(microorganismos){
           if(vectores=="no"){
             if(huesped=="animal"){
               if(enzima=="no"){
-                if(vectores=="si"){
+                if(vacuna=="si"){
                   if(trans=="fecal"){print("tienes el rotavirus")
                     ADN_analisis()}
                 }
@@ -389,11 +389,11 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }#aquí acaba todo lo de los virus
-  } else if (micro_inicial == "bacterias" ) {identificar_bacteria <- function() {
+  } else if (micro_inicial == "bacterias" ) {
   # Preguntas iniciales
-  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
-  while(tolower(gram) != "positiva" & tolower(gram) != "negativa" & tolower(gram) != "NA") { #corchete del while
-    gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")  
+  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")
+  while(tolower(gram) != "positiva" & tolower(gram) != "negativa" ) { #corchete del while
+    gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")  
   } #corchete del while 
   morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
   while (tolower (morfologia) != "coco" & tolower (morfologia) != "bacilo" ){
@@ -424,7 +424,7 @@ adivina_microorganismos <- function(microorganismos){
     esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
   }
   fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
-  while ("si" & tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
+  while ( tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
     fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
   }
   catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
@@ -670,19 +670,16 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }
-    } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
-    if (genero == "sí") {
-      print("La bacteria es Mycobacterium tuberculosis:") 
-      ADN_analisis()
     } 
-    }
 }
 
-identificar_bacteria()
-}
   reinicio_juego()
 }  
+cat("¡Bienvenido, antes de iniciar te recomendamos instalar este paquete para poder visualizar las instrucciones !\n")
+install.packages("prettydoc")
+library(prettydoc)
 
+cat("Una vez finalizada la instalacion, puedes acceder a las instrucciones y estas listo para inciciar !\n")
 adivina_microorganismos(microorganismos)
 
 ########################################

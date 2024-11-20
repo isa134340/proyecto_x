@@ -477,3 +477,7 @@ analisis_AA_2 <- function() {
   return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
 }
 ```
+
+
+install.packages("prettydoc")
+library(prettydoc)
