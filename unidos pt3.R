@@ -424,7 +424,7 @@ adivina_microorganismos <- function(microorganismos){
     esporas <- readline(prompt = "¿La bacteria forma esporas? (sí/no): ")
   }
   fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
-  while ("si" & tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
+  while ( tolower (fermentadora_de_glucosa) !="sí" & tolower (fermentadora_de_glucosa) != "no"){
     fermentadora_de_glucosa <- readline(prompt = "¿La bacteria fermenta la glucosa? (sí/no): ")
   }
   catalasa <- readline(prompt = "¿La bacteria es catalasa positiva? (sí/no): ")
