@@ -8,8 +8,10 @@ author: "Alondra Domínguez
   
   David Flores"
 date: "Bioinformática"
-output: html_document
-theme: "cerulean"
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+
 ---
 
 # **Bienvenido al juego de Adivina Quien! **
