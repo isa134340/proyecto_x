@@ -683,7 +683,7 @@ cat("Una vez finalizada la instalacion, puedes acceder a las instrucciones y est
 adivina_microorganismos(microorganismos)
 
 ########################################
-#PARA REINICIAR EL JUEGO; ES UNA FUNCION APARTE.
+#PARA REINICIAR EL JUEGO
 reinicio_juego <- function() {
   readline(prompt = "¿Quieres intentarlo de nuevo? (si/no): ") -> respuesta
   while (respuesta != "si" & respuesta !="no") {
