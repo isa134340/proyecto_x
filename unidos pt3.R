@@ -391,8 +391,8 @@ adivina_microorganismos <- function(microorganismos){
     }#aquí acaba todo lo de los virus
   } else if (micro_inicial == "bacterias" ) {
   # Preguntas iniciales
-  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")
-  while(tolower(gram) != "positiva" & tolower(gram) != "negativa" & tolower(gram) != "NA") { #corchete del while
+  gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")
+  while(tolower(gram) != "positiva" & tolower(gram) != "negativa" ) { #corchete del while
     gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")  
   } #corchete del while 
   morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
@@ -670,12 +670,7 @@ adivina_microorganismos <- function(microorganismos){
         }
       }
     }
-    } else if (gram == "NA") {genero <- readline(prompt = "¿La bacteria pretenece al genero Mycobacterium ? (sí/no): ")
-    if (genero == "sí") {
-      print("La bacteria es Mycobacterium tuberculosis:") 
-      ADN_analisis()
     } 
-    }
 }
 
   reinicio_juego()
