@@ -393,7 +393,7 @@ adivina_microorganismos <- function(microorganismos){
   # Preguntas iniciales
   gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")
   while(tolower(gram) != "positiva" & tolower(gram) != "negativa" ) { #corchete del while
-    gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa/NA): ")  
+    gram <- readline(prompt = "¿La bacteria es Gram positiva o Gram negativa? (positiva/negativa): ")  
   } #corchete del while 
   morfologia <- readline(prompt = "¿Cuál es la morfología de la bacteria? (coco/bacilo): ")
   while (tolower (morfologia) != "coco" & tolower (morfologia) != "bacilo" ){
