@@ -482,5 +482,7 @@ analisis_AA_2 <- function() {
 install.packages("prettydoc")
 library(prettydoc)
 
-dir.create("nueva_Carpeta")
+dir.create("~/proyecto_x/nueva_Carpeta")
 #hola
+
+file.create("~/proyecto_x/holita/archivo.txt")
