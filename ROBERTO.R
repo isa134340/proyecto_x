@@ -481,3 +481,5 @@ analisis_AA_2 <- function() {
 
 install.packages("prettydoc")
 library(prettydoc)
+
+dir.create("nueva_Carpeta")
