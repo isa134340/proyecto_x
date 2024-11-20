@@ -389,3 +389,4 @@ analisis_AA_2 <- function() {
   # Devolver la secuencia y su tamaño
   return(list(secuencia = secuencia, tamaño_aa = tamaño_aa))
 }
+analisis_AA_2()
