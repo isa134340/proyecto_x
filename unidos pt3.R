@@ -675,7 +675,11 @@ adivina_microorganismos <- function(microorganismos){
 
   reinicio_juego()
 }  
+cat("¡Bienvenido, antes de iniciar te recomendamos instalar este paquete para poder visualizar las instrucciones !\n")
+install.packages("prettydoc")
+library(prettydoc)
 
+cat("Una vez finalizada la instalacion, puedes acceder a las instrucciones y estas listo para inciciar !\n")
 adivina_microorganismos(microorganismos)
 
 ########################################
