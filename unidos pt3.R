@@ -296,7 +296,7 @@ adivina_microorganismos <- function(microorganismos){
           if(vectores=="no"){
             if(huesped=="animal"){
               if(enzima=="no"){
-                if(vectores=="si"){
+                if(vacuna=="si"){
                   if(trans=="fecal"){print("tienes el rotavirus")
                     ADN_analisis()}
                 }
